@@ -672,10 +672,8 @@ const MedicalDevices = () => {
     "Patient Monitors",
     "Ventilators",
     "Surgical Gloves",
-    "Defibrillators",
     "ECG / EEG Systems",
     "Dialysis Machines",
-    "Anesthesia Workstations",
     "Portable & Home Healthcare Devices",
   ];
 

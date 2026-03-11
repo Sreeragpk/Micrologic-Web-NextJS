@@ -127,7 +127,7 @@ const AboutSection = () => {
             transition={{ delay: 0.2 }}
           >
             <Sparkles className="h-4 w-4 text-amber-500" />
-            <span>Industry 4.0 Powered Solutions</span>
+            <span>Innovative Automation Solutions</span>
           </motion.div>
 
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-900 tracking-tight leading-tight">

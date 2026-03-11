@@ -241,7 +241,7 @@
 
 const HeroSection = () => {
   return (
-    <div className="relative w-full h-[50vh] md:h-[60vh] lg:h-[80vh] overflow-hidden">
+    <div className="relative w-full h-[50vh] md:h-[60vh] lg:h-[69vh] overflow-hidden">
 
       <video
         autoPlay

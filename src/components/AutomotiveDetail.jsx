@@ -955,7 +955,7 @@ const Automotive = () => {
         "Infotainment Systems",
         "Audio Systems",
         "HVAC Controllers",
-        "Silver Boxes",
+        "Silver Boxe",
       ],
     },
     {

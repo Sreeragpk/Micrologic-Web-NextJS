@@ -115,7 +115,7 @@ const DigitalTransformation = () => {
           >
             <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
               <Image
-                src="/assets/digitalimg.webp"
+                src="/assets/digitalimgnew.webp"
                 alt="FactEyes Data Architecture"
                 width={1200}
                 height={600}

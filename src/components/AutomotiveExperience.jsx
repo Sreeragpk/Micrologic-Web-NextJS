@@ -143,7 +143,7 @@ const categories = [
       "Infotainment Systems",
       "Audio Systems",
       "HVAC Controllers",
-      "Silver Boxes",
+      "Silver Boxe",
     ],
   },
   {

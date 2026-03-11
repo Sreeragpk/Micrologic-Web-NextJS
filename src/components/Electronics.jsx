@@ -76,7 +76,7 @@ const Electronics = () => {
       {/* ================= HERO ================= */}
       <div className="relative w-full h-[60vh] min-h-[400px] max-h-[600px] overflow-hidden">
         <Image
-          src="/assets/electronicsandelectrical.jpg"
+          src="/assets/electronicsandelectrical.webp"
           alt="Electronic Devices Automation"
           fill
           className="object-cover object-center"
