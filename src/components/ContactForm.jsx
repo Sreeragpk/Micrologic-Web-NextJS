@@ -135,7 +135,7 @@ const handleSubmit = async (e) => {
           <span className="whitespace-nowrap">NH 275</span>
         </>
       ),
-      secondary: "1st Phase, Bengaluru, Karnataka 560074",
+      secondary: "1st Phase, Bengaluru, Karnataka 560 074",
       gradient: "from-blue-500 to-indigo-600",
       bgGradient: "from-blue-50 to-indigo-50",
       iconBg: "bg-blue-100",

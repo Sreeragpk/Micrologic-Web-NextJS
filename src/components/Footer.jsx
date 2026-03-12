@@ -256,7 +256,7 @@ const Footer = () => {
   return (
     <footer className="bg-linear-to-br from-gray-900 via-gray-800 to-gray-900 text-gray-300">
       <div className="container mx-auto px-6 lg:px-12 py-16">
-       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div>
             <Image
@@ -268,13 +268,13 @@ const Footer = () => {
               priority
             />
 
-            <div className="flex items-start gap-3 text-gray-400 max-w-sm">
-              <MapPin size={18} className="mt-1 shrink-0 text-blue-400" />
-              <p className="text-sm leading-relaxed wrap-break-word">
-                #22-D1, Micrologic Drive, KIADB, Kumbalgodu Industrial Area, NH
-                275, 1st Phase, Bengaluru, Karnataka 560074
-              </p>
-            </div>
+          <div className="flex items-start gap-3 text-gray-400 max-w-sm">
+  <MapPin size={18} className="mt-1 shrink-0 text-blue-400 mr-1" />
+  <p className="text-sm leading-relaxed break-words">
+    #22-D1, Micrologic Drive, KIADB, Kumbalgodu Industrial Area, NH 275,
+    1st Phase, Bengaluru, Karnataka 560&nbsp;074
+  </p>
+</div>
           </div>
 
           {/* Solutions */}
@@ -326,55 +326,55 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-{/* Industries */}
-<div>
-  <h4 className="text-lg font-semibold text-white mb-6 relative inline-block">
-    Industries
-    <span className="absolute bottom-0 left-0 w-12 h-0.5 bg-blue-500"></span>
-  </h4>
+          {/* Industries */}
+          <div>
+            <h4 className="text-lg font-semibold text-white mb-6 relative inline-block">
+              Industries
+              <span className="absolute bottom-0 left-0 w-12 h-0.5 bg-blue-500"></span>
+            </h4>
 
-  <ul className="space-y-3">
-    <li>
-      <a
-        href="/industries/automotive-automation"
-        className="text-gray-400 hover:text-blue-400 transition-colors duration-200 flex items-center group"
-      >
-        <span className="w-0 group-hover:w-2 h-0.5 bg-blue-400 mr-0 group-hover:mr-2 transition-all duration-200"></span>
-        Automotive
-      </a>
-    </li>
+            <ul className="space-y-3">
+              <li>
+                <a
+                  href="/industries/automotive-automation"
+                  className="text-gray-400 hover:text-blue-400 transition-colors duration-200 flex items-center group"
+                >
+                  <span className="w-0 group-hover:w-2 h-0.5 bg-blue-400 mr-0 group-hover:mr-2 transition-all duration-200"></span>
+                  Automotive
+                </a>
+              </li>
 
-    <li>
-      <a
-        href="/industries/electric-vehicle-automation"
-        className="text-gray-400 hover:text-blue-400 transition-colors duration-200 flex items-center group"
-      >
-        <span className="w-0 group-hover:w-2 h-0.5 bg-blue-400 mr-0 group-hover:mr-2 transition-all duration-200"></span>
-        Electric Vehicles
-      </a>
-    </li>
+              <li>
+                <a
+                  href="/industries/electric-vehicle-automation"
+                  className="text-gray-400 hover:text-blue-400 transition-colors duration-200 flex items-center group"
+                >
+                  <span className="w-0 group-hover:w-2 h-0.5 bg-blue-400 mr-0 group-hover:mr-2 transition-all duration-200"></span>
+                  Electric Vehicles
+                </a>
+              </li>
 
-    <li>
-      <a
-        href="/industries/medical-device-automation"
-        className="text-gray-400 hover:text-blue-400 transition-colors duration-200 flex items-center group"
-      >
-        <span className="w-0 group-hover:w-2 h-0.5 bg-blue-400 mr-0 group-hover:mr-2 transition-all duration-200"></span>
-        Medical Devices
-      </a>
-    </li>
+              <li>
+                <a
+                  href="/industries/electrical-and-electronics-automation"
+                  className="text-gray-400 hover:text-blue-400 transition-colors duration-200 flex items-center group"
+                >
+                  <span className="w-0 group-hover:w-2 h-0.5 bg-blue-400 mr-0 group-hover:mr-2 transition-all duration-200"></span>
+                  Electrical & Electronics
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/industries/medical-device-automation"
+                  className="text-gray-400 hover:text-blue-400 transition-colors duration-200 flex items-center group"
+                >
+                  <span className="w-0 group-hover:w-2 h-0.5 bg-blue-400 mr-0 group-hover:mr-2 transition-all duration-200"></span>
+                  Medical Devices
+                </a>
+              </li>
 
-    <li>
-      <a
-        href="/industries/electrical-and-electronics-automation"
-        className="text-gray-400 hover:text-blue-400 transition-colors duration-200 flex items-center group"
-      >
-        <span className="w-0 group-hover:w-2 h-0.5 bg-blue-400 mr-0 group-hover:mr-2 transition-all duration-200"></span>
-        Electronics
-      </a>
-    </li>
-  </ul>
-</div>
+            </ul>
+          </div>
           {/* Contact */}
           <div>
             <h4 className="text-lg font-semibold text-white mb-6 relative inline-block">

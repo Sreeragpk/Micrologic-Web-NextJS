@@ -1,4 +1,3 @@
-
 /// AssemblyAutomationSection.jsx
 "use client";
 
@@ -90,10 +89,18 @@ const solutionCategories = [
     subProducts: [
       {
         name: "Chain Conveyor",
-        images: ["/assets/Conveyorcpy.webp", "/assets/chain.webp", "/assets/pallet1.webp", "/assets/chain2.webp"],
+        images: [
+          "/assets/Conveyorcpy.webp",
+          "/assets/chain.webp",
+          "/assets/pallet1.webp",
+          "/assets/chain2.webp",
+        ],
       },
       { name: "Belt Conveyor", images: ["/assets/belt (1).webp"] },
-      { name: "Pallet Movers & Lifters", images: ["/assets/pallet (1).webp", "/assets/Lifter 1.1.webp"] },
+      {
+        name: "Pallet Movers & Lifters",
+        images: ["/assets/pallet (1).webp", "/assets/Lifter 1.1.webp"],
+      },
     ],
   },
   {
@@ -117,7 +124,12 @@ const solutionCategories = [
     subProducts: [
       {
         name: "Modular Discrete Station",
-        images: ["/assets/Cellular.webp", "/assets/Cellular2.webp", "/assets/SBDP.webp", "/assets/line1new.webp"],
+        images: [
+          "/assets/Cellular.webp",
+          "/assets/Cellular2.webp",
+          "/assets/SBDP.webp",
+          "/assets/line1new.webp",
+        ],
       },
     ],
   },
@@ -142,7 +154,11 @@ const solutionCategories = [
     subProducts: [
       {
         name: "Rotary Indexing Tables",
-        images: ["/assets/Rotary2cpy.webp", "/assets/Rotarynew.webp", "/assets/rotary (1).webp"],
+        images: [
+          "/assets/Rotary2cpy.webp",
+          "/assets/Rotarynew.webp",
+          "/assets/rotary (1).webp",
+        ],
       },
     ],
   },
@@ -164,10 +180,22 @@ const solutionCategories = [
       "Enhance productivity while maintaining safe and ergonomic working conditions",
     ],
     subProducts: [
-      { name: "Robotic Screw Fixing", images: ["/assets/ROBOT SCREWING -BCM Stn 2.webp"] },
-      { name: "Robotic Soldering", images: ["/assets/Soldering Station1.webp"] },
-      { name: "Robotic Dispensing", images: ["/assets/dispensing (1).webp", "/assets/Dispensing2copy.webp"] },
-      { name: "Robotic Pick and Place", images: ["/assets/RoboP&P2.webp", "/assets/RoboP&Pcopy.webp"] },
+      {
+        name: "Robotic Screw Fixing",
+        images: ["/assets/ROBOT SCREWING -BCM Stn 2.webp"],
+      },
+      {
+        name: "Robotic Soldering",
+        images: ["/assets/Soldering Station1.webp"],
+      },
+      {
+        name: "Robotic Dispensing",
+        images: ["/assets/dispensing (1).webp", "/assets/Dispensing2copy.webp"],
+      },
+      {
+        name: "Robotic Pick and Place",
+        images: ["/assets/RoboP&P2.webp", "/assets/RoboP&Pcopy.webp"],
+      },
     ],
   },
   {
@@ -190,7 +218,13 @@ const solutionCategories = [
     subProducts: [
       {
         name: "Vision Inspection System",
-        images: ["/assets/visionimg.webp", "/assets/vision2.webp", "/assets/vision3.webp", "/assets/vision4.webp", "/assets/isight.webp"],
+        images: [
+          "/assets/visionimg.webp",
+          "/assets/vision2.webp",
+          "/assets/vision3.webp",
+          "/assets/vision4.webp",
+          "/assets/isight.webp",
+        ],
       },
     ],
   },
@@ -228,7 +262,8 @@ const automationBenefits = [
   {
     icon: TrendingUp,
     title: "Higher Throughput",
-    description: "Automated assembly systems significantly increase production speed while maintaining consistent cycle times.",
+    description:
+      "Automated assembly systems significantly increase production speed while maintaining consistent cycle times.",
     color: "blue",
     stat: "40%",
     statLabel: "Faster Production",
@@ -236,7 +271,8 @@ const automationBenefits = [
   {
     icon: Award,
     title: "Consistent Quality",
-    description: "Precision-controlled automation minimizes human error and ensures repeatable, high-quality assembly.",
+    description:
+      "Precision-controlled automation minimizes human error and ensures repeatable, high-quality assembly.",
     color: "emerald",
     stat: "99.9%",
     statLabel: "Quality Rate",
@@ -244,7 +280,8 @@ const automationBenefits = [
   {
     icon: DollarSign,
     title: "Cost Efficiency",
-    description: "Reduced rework, scrap, and labor dependency lead to lower overall manufacturing costs.",
+    description:
+      "Reduced rework, scrap, and labor dependency lead to lower overall manufacturing costs.",
     color: "purple",
     stat: "30%",
     statLabel: "Cost Reduction",
@@ -252,7 +289,8 @@ const automationBenefits = [
   {
     icon: RefreshCw,
     title: "Scalability & Flexibility",
-    description: "Automation enables quick adaptation to new product variants, volume changes, and evolving market demands.",
+    description:
+      "Automation enables quick adaptation to new product variants, volume changes, and evolving market demands.",
     color: "orange",
     stat: "2x",
     statLabel: "Faster Changeover",
@@ -260,7 +298,8 @@ const automationBenefits = [
   {
     icon: Shield,
     title: "Process Reliability",
-    description: "Automated systems deliver stable, predictable performance with minimal variation across shifts and batches.",
+    description:
+      "Automated systems deliver stable, predictable performance with minimal variation across shifts and batches.",
     color: "indigo",
     stat: "24/7",
     statLabel: "Operation Ready",
@@ -268,7 +307,8 @@ const automationBenefits = [
   {
     icon: Database,
     title: "Data & Traceability",
-    description: "Integrated sensors and software provide real-time production data for quality control and continuous improvement.",
+    description:
+      "Integrated sensors and software provide real-time production data for quality control and continuous improvement.",
     color: "cyan",
     stat: "100%",
     statLabel: "Traceability",
@@ -389,7 +429,10 @@ const AssemblyAutomationSection = () => {
     if (!cat) return;
     setActiveViewer((prev) => ({
       ...prev,
-      subProductIndex: prev.subProductIndex === 0 ? cat.subProducts.length - 1 : prev.subProductIndex - 1,
+      subProductIndex:
+        prev.subProductIndex === 0
+          ? cat.subProducts.length - 1
+          : prev.subProductIndex - 1,
       imageIndex: 0,
     }));
   };
@@ -410,7 +453,10 @@ const AssemblyAutomationSection = () => {
     if (!subProduct || subProduct.images.length <= 1) return;
     setActiveViewer((prev) => ({
       ...prev,
-      imageIndex: prev.imageIndex === 0 ? subProduct.images.length - 1 : prev.imageIndex - 1,
+      imageIndex:
+        prev.imageIndex === 0
+          ? subProduct.images.length - 1
+          : prev.imageIndex - 1,
     }));
   };
 
@@ -516,11 +562,16 @@ const AssemblyAutomationSection = () => {
                   <span>Precision Engineering</span>
                 </motion.div>
                 <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-                  Precision Assembly for <span className="text-transparent bg-clip-text bg-blue-600">Critical Applications</span>
+                  Precision Assembly for{" "}
+                  <span className="text-transparent bg-clip-text bg-blue-600">
+                    Critical Applications
+                  </span>
                 </h2>
                 <p className="text-slate-600 max-w-3xl mx-auto text-lg">
-                  We ensure highly precise assembly of products such as electronic components, airbags, automotive lighting, instrument panels, infotainment
-                  systems, medical devices, and more.
+                  We ensure highly precise assembly of products such as
+                  electronic components, airbags, automotive lighting,
+                  instrument panels, infotainment systems, medical devices, and
+                  more.
                 </p>
               </div>
 
@@ -529,14 +580,16 @@ const AssemblyAutomationSection = () => {
                   {
                     icon: Users,
                     title: "People-Assisted Semi-Automated",
-                    description: "Flexible solutions combining human expertise with automation for optimal efficiency and quality control.",
+                    description:
+                      "Flexible solutions combining human expertise with automation for optimal efficiency and quality control.",
                     gradient: "from-blue-600 to-blue-500",
                     bgPattern: "bg-blue-50",
                   },
                   {
                     icon: Rocket,
                     title: "Fully Automatic High-Volume",
-                    description: "Lights-out automation systems designed for maximum throughput and 24/7 production capability.",
+                    description:
+                      "Lights-out automation systems designed for maximum throughput and 24/7 production capability.",
                     gradient: "from-purple-600 to-purple-500",
                     bgPattern: "bg-purple-50",
                   },
@@ -552,14 +605,24 @@ const AssemblyAutomationSection = () => {
                       transition={{ delay: idx * 0.15 }}
                       whileHover={{ y: -5 }}
                     >
-                      <div className={`absolute inset-0 ${card.bgPattern} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
-                      <div className={`absolute -top-10 -right-10 w-32 h-32 bg-gradient-to-br ${card.gradient} opacity-5 rounded-full group-hover:scale-150 transition-transform duration-500`}></div>
+                      <div
+                        className={`absolute inset-0 ${card.bgPattern} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
+                      ></div>
+                      <div
+                        className={`absolute -top-10 -right-10 w-32 h-32 bg-gradient-to-br ${card.gradient} opacity-5 rounded-full group-hover:scale-150 transition-transform duration-500`}
+                      ></div>
                       <div className="relative z-10">
-                        <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${card.gradient} flex items-center justify-center shadow-lg mb-5`}>
+                        <div
+                          className={`w-14 h-14 rounded-xl bg-gradient-to-br ${card.gradient} flex items-center justify-center shadow-lg mb-5`}
+                        >
                           <IconComp className="w-7 h-7 text-white" />
                         </div>
-                        <h3 className="text-xl font-bold text-slate-900 mb-3">{card.title}</h3>
-                        <p className="text-slate-600 leading-relaxed">{card.description}</p>
+                        <h3 className="text-xl font-bold text-slate-900 mb-3">
+                          {card.title}
+                        </h3>
+                        <p className="text-slate-600 leading-relaxed">
+                          {card.description}
+                        </p>
                       </div>
                     </motion.div>
                   );
@@ -569,7 +632,13 @@ const AssemblyAutomationSection = () => {
           </motion.div>
 
           {/* Solutions Portfolio Section */}
-          <motion.div className="mb-20" initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+          <motion.div
+            className="mb-20"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
             <div className="text-center mb-12">
               <motion.div
                 className="inline-flex items-center gap-2 px-4 py-1.5 bg-purple-50 border border-purple-100 rounded-full text-purple-600 text-sm font-medium mb-4"
@@ -580,8 +649,13 @@ const AssemblyAutomationSection = () => {
                 <Package className="w-4 h-4" />
                 <span>Complete Solutions Portfolio</span>
               </motion.div>
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Our Assembly Automation Solutions</h2>
-              <p className="text-slate-600 max-w-3xl mx-auto text-lg">Comprehensive range of proven automation systems designed to meet your unique manufacturing challenges</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+                Our Assembly Automation Solutions
+              </h2>
+              <p className="text-slate-600 max-w-3xl mx-auto text-lg">
+                Comprehensive range of proven automation systems designed to
+                meet your unique manufacturing challenges
+              </p>
             </div>
 
             {/* Solution Categories Accordion */}
@@ -600,11 +674,18 @@ const AssemblyAutomationSection = () => {
                     viewport={{ once: true }}
                     transition={{ delay: idx * 0.1 }}
                     className={`bg-white rounded-2xl border-2 transition-all duration-300 overflow-hidden ${
-                      isExpanded ? `${colorClasses.border} shadow-lg` : "border-slate-100 hover:border-slate-200 shadow-sm hover:shadow-md"
+                      isExpanded
+                        ? `${colorClasses.border} shadow-lg`
+                        : "border-slate-100 hover:border-slate-200 shadow-sm hover:shadow-md"
                     }`}
                   >
                     {/* Category Header */}
-                    <button onClick={() => setExpandedCategory(isExpanded ? null : category.id)} className="w-full p-6 flex items-center justify-between transition-colors duration-300">
+                    <button
+                      onClick={() =>
+                        setExpandedCategory(isExpanded ? null : category.id)
+                      }
+                      className="w-full p-6 flex items-center justify-between transition-colors duration-300"
+                    >
                       <div className="flex items-center gap-4">
                         <motion.div
                           className={`w-14 h-14 rounded-xl bg-gradient-to-br ${category.gradient} flex items-center justify-center shadow-lg`}
@@ -615,7 +696,9 @@ const AssemblyAutomationSection = () => {
                         </motion.div>
                         <div className="text-left">
                           <h3 className="text-xl font-bold text-slate-900 flex items-center gap-2">
-                            <span className="text-slate-400 font-medium">{String(idx + 1).padStart(2, "0")}</span>
+                            <span className="text-slate-400 font-medium">
+                              {String(idx + 1).padStart(2, "0")}
+                            </span>
                             {category.title}
                           </h3>
                         </div>
@@ -625,7 +708,9 @@ const AssemblyAutomationSection = () => {
                         transition={{ duration: 0.3 }}
                         className={`w-10 h-10 rounded-full ${colorClasses.light} flex items-center justify-center`}
                       >
-                        <ChevronDown className={`w-5 h-5 ${colorClasses.text}`} />
+                        <ChevronDown
+                          className={`w-5 h-5 ${colorClasses.text}`}
+                        />
                       </motion.div>
                     </button>
 
@@ -639,90 +724,90 @@ const AssemblyAutomationSection = () => {
                           transition={{ duration: 0.4, ease: "easeInOut" }}
                           className="overflow-hidden"
                         >
-                          <div className={`p-6 pt-0 bg-gradient-to-br ${category.bgGradient}`}>
+                          <div
+                            className={`p-6 pt-0 bg-gradient-to-br ${category.bgGradient}`}
+                          >
                             <div className="h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent mb-6"></div>
 
                             {/* Vision Inspection Parameter Section */}
                             {isVisionInspection && (
-                              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="mb-8">
-                                <div className="relative group">
-                                  <div className="absolute -inset-[1px] bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-2xl opacity-75 blur-sm group-hover:opacity-100 transition-opacity duration-500"></div>
-                                  <div className="absolute -inset-[1px] bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-2xl animate-pulse"></div>
+                              <div className="mb-8">
+                                <div className="bg-slate-900 rounded-2xl p-8 border border-slate-800">
+                                  {/* Header */}
+                                  <div className="flex items-center gap-4 mb-6">
+                                    <div className="w-12 h-12 rounded-xl bg-indigo-600 flex items-center justify-center">
+                                      <Eye className="w-6 h-6 text-white" />
+                                    </div>
 
-                                  <div className="relative bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 rounded-2xl p-8 overflow-hidden">
-                                    <div className="absolute inset-0 overflow-hidden"></div>
-
-                                    <div className="relative z-10">
-                                      <div className="flex items-center gap-4 mb-6">
-                                        <motion.div
-                                          className="relative"
-                                          animate={{
-                                            boxShadow: ["0 0 20px rgba(99, 102, 241, 0.5)", "0 0 40px rgba(99, 102, 241, 0.8)", "0 0 20px rgba(99, 102, 241, 0.5)"],
-                                          }}
-                                          transition={{ duration: 2, repeat: Infinity }}
-                                        >
-                                          <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
-                                            <Eye className="w-7 h-7 text-white" />
-                                          </div>
-                                        </motion.div>
-                                        <div>
-                                          <h3 className="text-2xl font-bold text-white">Vision Inspection Parameters</h3>
-                                        </div>
-                                      </div>
-
-                                      <p className="text-slate-300 leading-relaxed mb-8 text-lg">
-                                        Our intelligent vision inspection platform integrates advanced pre-processing and algorithm-driven analytics to deliver precise object presence
-                                        verification, high-accuracy OCR reading, robust BLOB detection, and reliable color detection—ensuring superior inspection performance while
-                                        maximizing ROI for modern manufacturing environments.
-                                      </p>
-
-                                      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                                        {visionParameters.map((param, pIdx) => {
-                                          const ParamIcon = param.icon;
-                                          return (
-                                            <motion.div
-                                              key={pIdx}
-                                              initial={{ opacity: 0, y: 20 }}
-                                              animate={{ opacity: 1, y: 0 }}
-                                              transition={{ delay: 0.3 + pIdx * 0.1 }}
-                                              whileHover={{ scale: 1.02, y: -5 }}
-                                              className="group/card relative"
-                                            >
-                                              <div className={`absolute inset-0 bg-gradient-to-r ${param.color} opacity-0 group-hover/card:opacity-20 rounded-xl blur-xl transition-opacity duration-300`}></div>
-
-                                              <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-5 hover:border-white/25 transition-all duration-300 h-full">
-                                                <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${param.color} flex items-center justify-center mb-4 shadow-lg`}>
-                                                  <ParamIcon className="w-6 h-6 text-white" />
-                                                </div>
-
-                                                <h4 className="text-white font-semibold mb-2 text-sm">{param.title}</h4>
-
-                                                <p className="text-slate-400 text-xs leading-relaxed">{param.description}</p>
-
-                                                <div className={`absolute bottom-0 left-4 right-4 h-[2px] bg-gradient-to-r ${param.color} opacity-0 group-hover/card:opacity-100 transition-opacity duration-300 rounded-full`}></div>
-                                              </div>
-                                            </motion.div>
-                                          );
-                                        })}
-                                      </div>
+                                    <div>
+                                      <h3 className="text-xl font-bold text-white">
+                                        Vision Inspection Parameters
+                                      </h3>
                                     </div>
                                   </div>
+
+                                  {/* Description */}
+                                  <p className="text-slate-400 leading-relaxed mb-8 max-w-3xl">
+                                    Our vision inspection platform uses
+                                    intelligent algorithms and high-precision
+                                    cameras to verify components, read markings,
+                                    detect defects, and validate product quality
+                                    in real time.
+                                  </p>
+
+                                  {/* Parameter Cards */}
+                                  <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                                    {visionParameters.map((param, pIdx) => {
+                                      const ParamIcon = param.icon;
+
+                                      return (
+                                        <div
+                                          key={pIdx}
+                                          className="bg-white/5 border border-white/10 rounded-xl p-5 hover:border-indigo-400/40 transition-all duration-300"
+                                        >
+                                          <div className="w-10 h-10 rounded-lg bg-indigo-500/20 flex items-center justify-center mb-3">
+                                            <ParamIcon className="w-5 h-5 text-indigo-400" />
+                                          </div>
+
+                                          <h4 className="text-white font-semibold text-sm mb-1">
+                                            {param.title}
+                                          </h4>
+
+                                          <p className="text-slate-400 text-xs">
+                                            {param.description}
+                                          </p>
+                                        </div>
+                                      );
+                                    })}
+                                  </div>
                                 </div>
-                              </motion.div>
+                              </div>
                             )}
 
                             <div className="grid lg:grid-cols-2 gap-8">
                               {/* Features List */}
                               <div>
                                 <h4 className="text-lg font-semibold text-slate-900 mb-4 flex items-center gap-2">
-                                  <CheckCircle2 className={`w-5 h-5 ${colorClasses.text}`} />
+                                  <CheckCircle2
+                                    className={`w-5 h-5 ${colorClasses.text}`}
+                                  />
                                   Key Features
                                 </h4>
                                 <ul className="space-y-3">
                                   {category.features.map((feature, fIdx) => (
-                                    <motion.li key={fIdx} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: fIdx * 0.05 }} className="flex items-start gap-3 group">
-                                      <div className={`w-2 h-2 rounded-full ${colorClasses.bg} mt-2 flex-shrink-0 group-hover:scale-125 transition-transform`}></div>
-                                      <span className="text-slate-700 text-sm leading-relaxed">{feature}</span>
+                                    <motion.li
+                                      key={fIdx}
+                                      initial={{ opacity: 0, x: -20 }}
+                                      animate={{ opacity: 1, x: 0 }}
+                                      transition={{ delay: fIdx * 0.05 }}
+                                      className="flex items-start gap-3 group"
+                                    >
+                                      <div
+                                        className={`w-2 h-2 rounded-full ${colorClasses.bg} mt-2 flex-shrink-0 group-hover:scale-125 transition-transform`}
+                                      ></div>
+                                      <span className="text-slate-700 text-sm leading-relaxed">
+                                        {feature}
+                                      </span>
                                     </motion.li>
                                   ))}
                                 </ul>
@@ -731,7 +816,9 @@ const AssemblyAutomationSection = () => {
                               {/* Single Product Card */}
                               <div>
                                 <h4 className="text-lg font-semibold text-slate-900 mb-4 flex items-center gap-2">
-                                  <Package className={`w-5 h-5 ${colorClasses.text}`} />
+                                  <Package
+                                    className={`w-5 h-5 ${colorClasses.text}`}
+                                  />
                                   Products
                                 </h4>
 
@@ -742,20 +829,33 @@ const AssemblyAutomationSection = () => {
                                   onClick={() => openViewer(category)}
                                   className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 cursor-pointer hover:shadow-xl hover:border-blue-200 transition-all duration-300 group relative overflow-hidden"
                                 >
-                                  <div className={`absolute inset-0 bg-gradient-to-br ${category.bgGradient} opacity-0 group-hover:opacity-50 transition-opacity duration-500`}></div>
+                                  <div
+                                    className={`absolute inset-0 bg-gradient-to-br ${category.bgGradient} opacity-0 group-hover:opacity-50 transition-opacity duration-500`}
+                                  ></div>
 
                                   <div className="relative z-10">
                                     <div className="w-full h-48 bg-slate-50 rounded-xl flex items-center justify-center overflow-hidden border border-slate-100 mb-4">
-                                      <Image src={category.thumbnail} alt={category.title} width={400} height={300} className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500" />
+                                      <Image
+                                        src={category.thumbnail}
+                                        alt={category.title}
+                                        width={400}
+                                        height={300}
+                                        className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                                      />
                                     </div>
 
                                     {category.subProducts.length > 1 && (
                                       <div className="flex flex-wrap gap-2 mt-4">
-                                        {category.subProducts.map((sp, spIdx) => (
-                                          <span key={spIdx} className={`text-xs px-3 py-1.5 rounded-full ${colorClasses.light} ${colorClasses.text} font-medium`}>
-                                            {sp.name}
-                                          </span>
-                                        ))}
+                                        {category.subProducts.map(
+                                          (sp, spIdx) => (
+                                            <span
+                                              key={spIdx}
+                                              className={`text-xs px-3 py-1.5 rounded-full ${colorClasses.light} ${colorClasses.text} font-medium`}
+                                            >
+                                              {sp.name}
+                                            </span>
+                                          ),
+                                        )}
                                       </div>
                                     )}
                                   </div>
@@ -773,151 +873,105 @@ const AssemblyAutomationSection = () => {
           </motion.div>
 
           {/* Why Automation Matters Section */}
-          <motion.div className="mb-20" initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-            <div className="relative bg-black rounded-[2.5rem] overflow-hidden border border-white/[0.08]">
-              <div className="absolute inset-0">
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-b from-blue-600/20 via-violet-600/10 to-transparent blur-3xl"></div>
-                <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-gradient-to-tr from-cyan-600/20 to-transparent blur-3xl"></div>
-                <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-gradient-to-tl from-violet-600/20 to-transparent blur-3xl"></div>
+     {/* Why Automation Matters Section */}
+<motion.div
+  className="mb-20"
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.6 }}
+>
+  <div className="bg-gradient-to-br from-slate-900 via-slate-900 to-slate-800/80 rounded-3xl p-10 lg:p-16 border border-slate-700/50 shadow-2xl shadow-black/20">
 
-                <div
-                  className="absolute inset-0 opacity-[0.02]"
-                  style={{
-                    backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")`,
-                  }}
-                ></div>
+    {/* Header */}
+    <div className="grid lg:grid-cols-2 gap-12 items-center mb-14">
+
+      <div>
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 bg-blue-500/10 border border-blue-500/20 rounded-full text-sm text-blue-300">
+          <Zap className="w-4 h-4 text-blue-400" />
+          Transformative Benefits
+        </div>
+
+        <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight mb-6">
+          Why Assembly
+          <br />
+          <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+            Automation Matters
+          </span>
+        </h2>
+
+        <p className="text-slate-400 text-lg max-w-xl leading-relaxed">
+          Assembly automation drives productivity, ensures consistent
+          product quality, and enables scalable manufacturing operations
+          in modern industrial environments.
+        </p>
+      </div>
+
+      <div className="bg-gradient-to-br from-white/[0.06] to-white/[0.02] border border-white/10 rounded-2xl p-6 backdrop-blur-sm">
+        <h3 className="text-white font-semibold mb-6 flex items-center gap-2">
+          <span className="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
+          Business Impact
+        </h3>
+
+        <div className="space-y-3">
+          {[
+            { label: "Throughput Increase", value: "↑ Higher", color: "text-emerald-400" },
+            { label: "Quality Variation", value: "↓ Minimal", color: "text-cyan-400" },
+            { label: "Operational Cost", value: "↓ Reduced", color: "text-blue-400" },
+            { label: "Scalability", value: "✓ Built-In", color: "text-violet-400" },
+          ].map((item, idx) => (
+            <div
+              key={idx}
+              className="group flex justify-between items-center p-3.5 rounded-xl bg-white/[0.03] border border-white/[0.06] hover:bg-white/[0.06] hover:border-white/[0.12] transition-all duration-300 cursor-default"
+            >
+              <span className="text-slate-300 text-sm">{item.label}</span>
+              <span className={`${item.color} font-semibold text-sm`}>
+                {item.value}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+    </div>
+
+    {/* Divider */}
+    <div className="h-px bg-gradient-to-r from-transparent via-slate-700/60 to-transparent mb-10"></div>
+
+    {/* Benefits Grid */}
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+      {automationBenefits.map((benefit, idx) => {
+        const IconComponent = benefit.icon;
+
+        return (
+          <motion.div
+            key={idx}
+            whileHover={{ y: -4, transition: { duration: 0.25, ease: "easeOut" } }}
+            className="group relative bg-gradient-to-br from-white/[0.04] to-transparent border border-white/[0.07] hover:border-blue-400/25 rounded-2xl p-6 transition-all duration-300 cursor-default"
+          >
+            {/* Soft glow on hover */}
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl bg-gradient-to-br from-blue-500/[0.06] via-transparent to-cyan-500/[0.04]"></div>
+
+            <div className="relative z-10">
+              <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-blue-500/15 to-blue-600/10 border border-blue-500/10 group-hover:border-blue-500/20 flex items-center justify-center mb-4 transition-colors duration-300">
+                <IconComponent className="w-5 h-5 text-blue-400 group-hover:text-blue-300 transition-colors duration-300" />
               </div>
 
-              <div className="relative z-10 p-8 lg:p-16">
-                <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-16">
-                  <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-                    <div className="relative inline-flex items-center gap-2 px-5 py-2.5 mb-8">
-                      <div className="absolute inset-0 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 rounded-full blur-lg"></div>
-                      <div className="relative flex items-center gap-2 bg-black/60 border border-yellow-500/40 rounded-full px-4 py-2">
-                        <Zap className="w-4 h-4 text-yellow-400 animate-pulse" />
-                        <span className="text-yellow-400 text-sm font-bold tracking-wide uppercase">Transformative Benefits</span>
-                      </div>
-                    </div>
+              <h3 className="text-white font-semibold mb-2 text-[15px]">
+                {benefit.title}
+              </h3>
 
-                    <h2 className="text-4xl md:text-5xl xl:text-6xl font-black leading-[1.05] mb-8">
-                      <span className="text-white drop-shadow-[0_0_35px_rgba(255,255,255,0.15)]">Why Assembly</span>
-                      <br />
-                      <span className="relative">
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-violet-500 drop-shadow-[0_0_25px_rgba(59,130,246,0.5)]">Automation Matters</span>
-                      </span>
-                    </h2>
-
-                    <p className="text-slate-400 text-lg lg:text-xl leading-relaxed max-w-xl">
-                      Assembly automation is no longer optional. It is a strategic enabler that drives productivity, consistency, and long-term manufacturing competitiveness in a rapidly
-                      evolving industrial landscape.
-                    </p>
-                  </motion.div>
-
-                  <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.1 }} className="relative">
-                    <div className="absolute -inset-[1px] bg-gradient-to-r from-cyan-500 via-blue-500 to-violet-500 rounded-3xl opacity-70 blur-sm"></div>
-                    <div className="absolute -inset-[1px] bg-gradient-to-r from-cyan-500 via-blue-500 to-violet-500 rounded-3xl"></div>
-
-                    <div className="relative bg-black rounded-3xl p-8">
-                      <h3 className="text-xl font-bold text-white mb-8 flex items-center gap-3">
-                        <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse shadow-[0_0_10px_rgba(34,211,238,0.8)]"></div>
-                        Business Impact at a Glance
-                      </h3>
-
-                      <div className="space-y-5">
-                        {[
-                          {
-                            label: "Throughput Increase",
-                            value: "↑ Significant",
-                            glow: "shadow-[0_0_20px_rgba(16,185,129,0.4)]",
-                            gradient: "from-emerald-400 to-green-500",
-                          },
-                          {
-                            label: "Quality Variation",
-                            value: "↓ Minimal",
-                            glow: "shadow-[0_0_20px_rgba(59,130,246,0.4)]",
-                            gradient: "from-blue-400 to-cyan-500",
-                          },
-                          {
-                            label: "Operational Cost",
-                            value: "↓ Optimized",
-                            glow: "shadow-[0_0_20px_rgba(139,92,246,0.4)]",
-                            gradient: "from-violet-400 to-purple-500",
-                          },
-                          {
-                            label: "Scalability",
-                            value: "✓ Built-In",
-                            glow: "shadow-[0_0_20px_rgba(251,191,36,0.4)]",
-                            gradient: "from-amber-400 to-yellow-500",
-                          },
-                        ].map((item, idx) => (
-                          <div key={idx} className="flex items-center justify-between p-4 bg-white/[0.02] rounded-xl border border-white/[0.05] hover:border-white/[0.15] transition-colors">
-                            <span className="text-slate-300 font-medium">{item.label}</span>
-                            <span className={`px-4 py-1.5 bg-gradient-to-r ${item.gradient} rounded-full text-white text-sm font-bold ${item.glow}`}>{item.value}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </motion.div>
-                </div>
-
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {automationBenefits.map((benefit, idx) => {
-                    const IconComponent = benefit.icon;
-                    const neonColors = [
-                      { color: "cyan", hex: "#22d3ee", glow: "shadow-[0_0_30px_rgba(34,211,238,0.3)]" },
-                      { color: "violet", hex: "#a78bfa", glow: "shadow-[0_0_30px_rgba(167,139,250,0.3)]" },
-                      { color: "emerald", hex: "#34d399", glow: "shadow-[0_0_30px_rgba(52,211,153,0.3)]" },
-                      { color: "amber", hex: "#fbbf24", glow: "shadow-[0_0_30px_rgba(251,191,36,0.3)]" },
-                      { color: "rose", hex: "#fb7185", glow: "shadow-[0_0_30px_rgba(251,113,133,0.3)]" },
-                      { color: "blue", hex: "#60a5fa", glow: "shadow-[0_0_30px_rgba(96,165,250,0.3)]" },
-                    ];
-                    const neon = neonColors[idx % 6];
-
-                    return (
-                      <motion.div
-                        key={idx}
-                        initial={{ opacity: 0, y: 40 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: idx * 0.08 }}
-                        className="group relative"
-                      >
-                        <div className={`absolute inset-0 ${neon.glow} opacity-0 group-hover:opacity-100 rounded-3xl transition-opacity duration-500`}></div>
-
-                        <div className="relative h-full bg-white/[0.02] border border-white/[0.08] hover:border-white/[0.2] rounded-3xl p-7 transition-all duration-500">
-                          <div className="absolute top-6 right-6">
-                            <span className="text-5xl font-black" style={{ color: `${neon.hex}10` }}>
-                              {String(idx + 1).padStart(2, "0")}
-                            </span>
-                          </div>
-
-                          <div
-                            className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-all duration-300 ${neon.glow}`}
-                            style={{
-                              background: `linear-gradient(135deg, ${neon.hex}20, ${neon.hex}05)`,
-                              border: `1px solid ${neon.hex}40`,
-                            }}
-                          >
-                            <IconComponent className="w-7 h-7" style={{ color: neon.hex }} />
-                          </div>
-
-                          <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
-                          <p className="text-slate-400 leading-relaxed">{benefit.description}</p>
-
-                          <div
-                            className="absolute bottom-0 left-6 right-6 h-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-full"
-                            style={{
-                              background: `linear-gradient(90deg, transparent, ${neon.hex}, transparent)`,
-                            }}
-                          ></div>
-                        </div>
-                      </motion.div>
-                    );
-                  })}
-                </div>
-              </div>
+              <p className="text-slate-400 group-hover:text-slate-300/90 text-sm leading-relaxed transition-colors duration-300">
+                {benefit.description}
+              </p>
             </div>
           </motion.div>
+        );
+      })}
+    </div>
+
+  </div>
+</motion.div>
         </div>
       </section>
 
@@ -939,7 +993,9 @@ const AssemblyAutomationSection = () => {
               transition={{ duration: 0.4, type: "spring", damping: 25 }}
               onClick={(e) => e.stopPropagation()}
             >
-              <div className={`bg-gradient-to-r ${activeCategory.gradient} p-6 text-white`}>
+              <div
+                className={`bg-gradient-to-r ${activeCategory.gradient} p-6 text-white`}
+              >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center">
@@ -949,15 +1005,20 @@ const AssemblyAutomationSection = () => {
                       })()}
                     </div>
                     <div>
-                      <p className="text-white/70 text-sm">{activeCategory.title}</p>
-                      <h3 className="text-2xl font-bold">{activeSubProduct.name}</h3>
+                      <p className="text-white/70 text-sm">
+                        {activeCategory.title}
+                      </p>
+                      <h3 className="text-2xl font-bold">
+                        {activeSubProduct.name}
+                      </h3>
                     </div>
                   </div>
 
                   <div className="flex items-center gap-3">
                     {activeCategory.subProducts.length > 1 && (
                       <span className="text-sm text-white/70 bg-white/10 px-3 py-1.5 rounded-full">
-                        {activeViewer.subProductIndex + 1} / {activeCategory.subProducts.length}
+                        {activeViewer.subProductIndex + 1} /{" "}
+                        {activeCategory.subProducts.length}
                       </span>
                     )}
                     <motion.button
@@ -985,7 +1046,9 @@ const AssemblyAutomationSection = () => {
                           }));
                         }}
                         className={`px-4 py-2 rounded-xl text-sm font-medium whitespace-nowrap transition-all duration-300 ${
-                          spIdx === activeViewer.subProductIndex ? "bg-white text-slate-900 shadow-lg" : "bg-white/10 text-white/80 hover:bg-white/20"
+                          spIdx === activeViewer.subProductIndex
+                            ? "bg-white text-slate-900 shadow-lg"
+                            : "bg-white/10 text-white/80 hover:bg-white/20"
                         }`}
                       >
                         {sp.name}
@@ -1005,7 +1068,13 @@ const AssemblyAutomationSection = () => {
                       exit={{ opacity: 0, x: -50 }}
                       transition={{ duration: 0.3 }}
                     >
-                      <Image src={activeSubProduct.images[activeViewer.imageIndex]} alt={activeSubProduct.name} width={600} height={400} className="max-h-[400px] w-auto object-contain" />
+                      <Image
+                        src={activeSubProduct.images[activeViewer.imageIndex]}
+                        alt={activeSubProduct.name}
+                        width={600}
+                        height={400}
+                        className="max-h-[400px] w-auto object-contain"
+                      />
                     </motion.div>
                   </AnimatePresence>
                 </div>
@@ -1069,13 +1138,25 @@ const AssemblyAutomationSection = () => {
                           }));
                         }}
                         className={`w-16 h-16 rounded-lg overflow-hidden border-2 transition-all duration-300 ${
-                          idx === activeViewer.imageIndex ? `border-2 shadow-lg` : "border-slate-200 hover:border-slate-300"
+                          idx === activeViewer.imageIndex
+                            ? `border-2 shadow-lg`
+                            : "border-slate-200 hover:border-slate-300"
                         }`}
-                        style={idx === activeViewer.imageIndex ? { borderColor: activeCategory.accentColor } : {}}
+                        style={
+                          idx === activeViewer.imageIndex
+                            ? { borderColor: activeCategory.accentColor }
+                            : {}
+                        }
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                       >
-                        <Image src={img} alt={`${activeSubProduct.name} ${idx + 1}`} width={64} height={64} className="w-full h-full object-contain bg-white p-1" />
+                        <Image
+                          src={img}
+                          alt={`${activeSubProduct.name} ${idx + 1}`}
+                          width={64}
+                          height={64}
+                          className="w-full h-full object-contain bg-white p-1"
+                        />
                       </motion.button>
                     ))}
                   </div>
@@ -1087,7 +1168,13 @@ const AssemblyAutomationSection = () => {
       </AnimatePresence>
 
       {/* Our Builds Section */}
-      <motion.div className="mb-20 container mx-auto px-6" initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+      <motion.div
+        className="mb-20 container mx-auto px-6"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
         <div className="text-center mb-12">
           <motion.div
             className="inline-flex items-center gap-2 px-4 py-1.5 bg-emerald-50 border border-emerald-100 rounded-full text-emerald-600 text-sm font-medium mb-4"
@@ -1096,12 +1183,24 @@ const AssemblyAutomationSection = () => {
             viewport={{ once: true }}
           ></motion.div>
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-            Our <span className="bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-600 bg-clip-text text-transparent">Builds</span>
+            Our{" "}
+            <span className="bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-600 bg-clip-text text-transparent">
+              Builds
+            </span>
           </h2>
-          <p className="text-slate-600 max-w-3xl mx-auto text-lg">Explore our portfolio of successfully delivered automation solutions across various industries</p>
+          <p className="text-slate-600 max-w-3xl mx-auto text-lg">
+            Explore our portfolio of successfully delivered automation solutions
+            across various industries
+          </p>
         </div>
 
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="relative">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2 }}
+          className="relative"
+        >
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-50/50 via-transparent to-teal-50/50 rounded-3xl -z-10 blur-xl"></div>
           <Carousel images={ourBuildsImages} />
         </motion.div>
