@@ -405,6 +405,7 @@
 import Image from "next/image";
 import { Mail, Users, Lightbulb, TrendingUp, Heart } from "lucide-react";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 // Variants for reusability
 const fadeUp = {
@@ -416,8 +417,8 @@ const fadeIn = {
   hidden: { opacity: 0 },
   visible: { opacity: 1 },
 };
-
 export default function Careers() {
+  const [selectedImage, setSelectedImage] = useState(null);
   return (
     <motion.div
       className="relative min-h-screen bg-gradient-to-br from-slate-50 via-sky-50 to-indigo-50 overflow-hidden"
@@ -461,11 +462,14 @@ export default function Careers() {
 
           <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
             Join the Future of
-            <span className="block text-transparent bg-clip-text bg-blue-600">Automation</span>
+            <span className="block text-transparent bg-clip-text bg-blue-600">
+              Automation
+            </span>
           </h1>
           <p className="max-w-3xl mx-auto text-xl md:text-2xl leading-relaxed text-gray-100">
-            At Micrologic, we don&apos;t just work together — we innovate, build and create together. Behind every
-            breakthrough is a team that believes and trusts in each other.
+            At Micrologic, we don&apos;t just work together — we innovate, build
+            and create together. Behind every breakthrough is a team that
+            believes and trusts in each other.
           </p>
 
           {/* <motion.div
@@ -488,10 +492,17 @@ export default function Careers() {
       </section>
 
       {/* Intro Section with Cards */}
-      <motion.section className="container mx-auto px-6 py-24" variants={fadeUp} transition={{ duration: 0.8 }}>
+      <motion.section
+        className="container mx-auto px-6 py-24"
+        variants={fadeUp}
+        transition={{ duration: 0.8 }}
+      >
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <motion.h2 className="text-5xl font-extrabold text-blue-600 mb-6" variants={fadeUp}>
+            <motion.h2
+              className="text-5xl font-extrabold text-blue-600 mb-6"
+              variants={fadeUp}
+            >
               Why Micrologic?
             </motion.h2>
             <motion.p
@@ -499,8 +510,8 @@ export default function Careers() {
               variants={fadeUp}
               transition={{ delay: 0.2 }}
             >
-              Micrologic designs, develops, manufactures and deploys high-end automation solutions for global
-              manufacturing companies.
+              Micrologic designs, develops, manufactures and deploys high-end
+              automation solutions for global manufacturing companies.
             </motion.p>
           </div>
 
@@ -516,12 +527,16 @@ export default function Careers() {
                   <Users className="w-8 h-8 text-indigo-600" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-blue-600 mb-3">Diverse Expertise</h3>
+                  <h3 className="text-2xl font-bold text-blue-600 mb-3">
+                    Diverse Expertise
+                  </h3>
                   <p className="text-slate-600 leading-relaxed">
-                    We are filled with talented people from diverse engineering disciplines —
+                    We are filled with talented people from diverse engineering
+                    disciplines —
                     <span className="font-semibold text-blue-700">
                       {" "}
-                      Mechanical, Electronics, Robotics, Machine Vision, and Software.
+                      Mechanical, Electronics, Robotics, Machine Vision, and
+                      Software.
                     </span>
                   </p>
                 </div>
@@ -539,10 +554,13 @@ export default function Careers() {
                   <Heart className="w-8 h-8 text-indigo-600" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-blue-600 mb-3">Celebrate Uniqueness</h3>
+                  <h3 className="text-2xl font-bold text-blue-600 mb-3">
+                    Celebrate Uniqueness
+                  </h3>
                   <p className="text-slate-600 leading-relaxed">
-                    It's through these creative and passionate teams that we are what we are today. We identify, nurture,
-                    and celebrate unique talents.
+                    It's through these creative and passionate teams that we are
+                    what we are today. We identify, nurture, and celebrate
+                    unique talents.
                   </p>
                 </div>
               </div>
@@ -552,7 +570,10 @@ export default function Careers() {
       </motion.section>
 
       {/* Culture Section with Icons */}
-      <motion.section className="relative py-24 overflow-hidden" variants={fadeIn}>
+      <motion.section
+        className="relative py-24 overflow-hidden"
+        variants={fadeIn}
+      >
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">
           <div
@@ -564,7 +585,10 @@ export default function Careers() {
         </div>
 
         <div className="container mx-auto px-6 relative z-10">
-          <motion.h2 className="text-4xl md:text-5xl font-bold text-center text-blue-600 mb-16" variants={fadeUp}>
+          <motion.h2
+            className="text-4xl md:text-5xl font-bold text-center text-blue-600 mb-16"
+            variants={fadeUp}
+          >
             Our Culture & Values
           </motion.h2>
 
@@ -608,7 +632,9 @@ export default function Careers() {
                   >
                     <value.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-800 mb-4">{value.title}</h3>
+                  <h3 className="text-2xl font-bold text-gray-800 mb-4">
+                    {value.title}
+                  </h3>
                   <p className="text-gray-600 leading-relaxed">{value.desc}</p>
                 </div>
               </motion.div>
@@ -617,40 +643,56 @@ export default function Careers() {
         </div>
       </motion.section>
 
-      {/* Team Spirit Section with Larger Images */}
-      <motion.section className="py-24 bg-gradient-to-b from-transparent to-white/50" variants={fadeUp}>
+      {/* Life at Micrologic Section */}
+      <motion.section
+        className="py-28 bg-gradient-to-b from-white via-slate-50 to-white"
+        variants={fadeUp}
+      >
         <div className="container mx-auto px-6">
-          <motion.div className="text-center mb-16" variants={fadeUp}>
-            <h2 className="text-5xl font-extrabold text-blue-600 mb-6">Life at Micrologic</h2>
-            <p className="text-xl text-slate-700 max-w-3xl mx-auto">
-              Our recent team outing was a celebration of this spirit — a day filled with laughter, connection, and
-              energy.
+          {/* Section Header */}
+          <motion.div
+            className="text-center mb-20 max-w-3xl mx-auto"
+            variants={fadeUp}
+          >
+            <h2 className="text-5xl font-bold text-blue-600 mb-6">
+              Life at Micrologic
+            </h2>
+
+            <p className="text-lg text-slate-600 leading-relaxed">
+              Our team thrives on collaboration, innovation, and shared success.
+              Moments like our recent team outing reflect the vibrant culture
+              that powers everything we build together.
             </p>
           </motion.div>
 
-          {/* Large Image Gallery */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {["/assets/team2.jpg", "/assets/team3.jpg", "/assets/team4.jpg"].map((img, i) => (
-              <motion.div
-                key={i}
-                className="relative group overflow-hidden rounded-3xl shadow-2xl"
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: i * 0.2 }}
-                viewport={{ once: true }}
-                whileHover={{ scale: 1.02 }}
-              >
-                <div className="relative h-96">
-                  <Image
-                    src={img}
-                    alt={`Team ${i + 1}`}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                </div>
-              </motion.div>
-            ))}
+          {/* Image Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-8xl mx-auto">
+      {[
+  "/assets/career1.webp",
+  "/assets/team2.jpg",
+  "/assets/career3.webp",
+].map((img, i) => (
+  <motion.div
+    key={i}
+    className="group relative overflow-hidden rounded-3xl shadow-xl cursor-pointer"
+    initial={{ opacity: 0, y: 40 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6, delay: i * 0.15 }}
+    viewport={{ once: true }}
+    onClick={() => setSelectedImage(img)}
+  >
+    <div className="relative h-[420px]">
+      <Image
+        src={img}
+        alt={`Micrologic team ${i + 1}`}
+        fill
+        className="object-cover transition-transform duration-700 group-hover:scale-110"
+      />
+
+      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-80 group-hover:opacity-100 transition duration-500" />
+    </div>
+  </motion.div>
+))}
           </div>
         </div>
       </motion.section>
@@ -665,7 +707,11 @@ export default function Careers() {
       >
         {/* Animated Wave Background */}
         <div className="absolute inset-0 opacity-10">
-          <svg className="absolute bottom-0 w-full h-40" preserveAspectRatio="none" viewBox="0 0 1440 320">
+          <svg
+            className="absolute bottom-0 w-full h-40"
+            preserveAspectRatio="none"
+            viewBox="0 0 1440 320"
+          >
             <motion.path
               fill="currentColor"
               d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,165.3C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
@@ -676,7 +722,10 @@ export default function Careers() {
           </svg>
         </div>
         <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
-          <motion.h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8" variants={fadeUp}>
+          <motion.h2
+            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8"
+            variants={fadeUp}
+          >
             Build the Future With Us
           </motion.h2>
 
@@ -685,13 +734,14 @@ export default function Careers() {
             variants={fadeUp}
             transition={{ delay: 0.2 }}
           >
-            We're looking for passionate minds to join our growing team —
+            We&apos;re looking for passionate minds to join our growing team —
             <span className="font-semibold">
               {" "}
-              Mechanical Engineers, Electrical Engineers, Application Engineers, .NET/Python Developers, Vision
-              Specialists, and AI/ML Engineers
+              Mechanical Engineers, Electrical Engineers, Application Engineers,
+              .NET/Python Developers, Vision Specialists, and AI/ML Engineers
             </span>
-            . If you thrive on innovation, creativity, and problem-solving, we'd love to hear from you.
+            . If you thrive on innovation, creativity, and problem-solving,
+            we&apos;d love to hear from you.
           </motion.p>
 
           <motion.a
@@ -703,7 +753,9 @@ export default function Careers() {
             whileTap={{ scale: 0.95 }}
           >
             <Mail className="w-6 h-6 group-hover:rotate-12 transition-transform duration-300" />
-            <span className="text-lg">Send Your CV to hr@micrologicglobal.com</span>
+            <span className="text-lg">
+              Send Your CV to hr@micrologicglobal.com
+            </span>
           </motion.a>
         </div>
       </motion.section>
@@ -735,6 +787,33 @@ export default function Careers() {
           }}
         />
       </div>
-    </motion.div>
+{/* Floating Elements for Visual Interest */}
+<div className="fixed inset-0 pointer-events-none overflow-hidden">
+  <motion.div
+    className="absolute top-20 left-10 w-20 h-20 bg-indigo-400 rounded-full opacity-10 blur-xl"
+    animate={{ x: [0, 100, 0], y: [0, -100, 0] }}
+    transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+  />
+</div>
+
+{/* IMAGE LIGHTBOX MODAL */}
+{selectedImage && (
+  <div
+    className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50"
+    onClick={() => setSelectedImage(null)}
+  >
+    <div className="relative max-w-6xl w-full px-6">
+      <Image
+        src={selectedImage}
+        alt="Full image"
+        width={1400}
+        height={900}
+        className="rounded-2xl object-contain w-full h-auto"
+      />
+    </div>
+  </div>
+)}
+
+</motion.div>
   );
 }
