@@ -406,6 +406,7 @@ import Image from "next/image";
 import { Mail, Users, Lightbulb, TrendingUp, Heart } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import Carousel from "@/components/Carousel";
 
 // Variants for reusability
 const fadeUp = {
@@ -419,6 +420,12 @@ const fadeIn = {
 };
 export default function Careers() {
   const [selectedImage, setSelectedImage] = useState(null);
+  const lifeImages = [
+  { src: "/assets/career1.webp", alt: "Micrologic Team Event" },
+  { src: "/assets/team2.jpg", alt: "Micrologic Team Collaboration" },
+  { src: "/assets/career3.webp", alt: "Micrologic Team Culture" },
+  { src: "/assets/workshop.webp", alt: "Micrologic Workshop" },
+];
   return (
     <motion.div
       className="relative min-h-screen bg-gradient-to-br from-slate-50 via-sky-50 to-indigo-50 overflow-hidden"
@@ -666,11 +673,12 @@ export default function Careers() {
           </motion.div>
 
           {/* Image Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-8xl mx-auto">
+          {/* <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-8xl mx-auto">
       {[
   "/assets/career1.webp",
   "/assets/team2.jpg",
   "/assets/career3.webp",
+  "/assets/workshop.webp",
 ].map((img, i) => (
   <motion.div
     key={i}
@@ -693,7 +701,10 @@ export default function Careers() {
     </div>
   </motion.div>
 ))}
-          </div>
+          </div> */}
+          <div className="max-w-7xl mx-auto">
+  <Carousel images={lifeImages} />
+</div>
         </div>
       </motion.section>
 

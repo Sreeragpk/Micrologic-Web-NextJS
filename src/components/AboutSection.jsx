@@ -54,7 +54,7 @@ const services = [
       "Vision Inspection",
     ],
     stats: { value: "From Assembly", label: "to Automation" },
-    image: "/assets/SBDP.png",
+    image: "/assets/assemblyhome.webp",
   },
   {
     title: "Traceability",

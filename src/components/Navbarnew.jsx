@@ -208,11 +208,11 @@ const navLinks = [
             href: "/support/faq",
             icon: <FaQuestionCircle className="text-indigo-600" />,
           },
-          {
-            name: "MTS Training",
-            href: "/support/mts-training",
-            icon: <FaChalkboardTeacher className="text-green-600" />,
-          },
+          // {
+          //   name: "MTS Training",
+          //   href: "/support/mts-training",
+          //   icon: <FaChalkboardTeacher className="text-green-600" />,
+          // },
         ],
       },
     ],
