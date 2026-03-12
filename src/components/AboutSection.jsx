@@ -45,7 +45,7 @@ const services = [
     textColor: "text-purple-600",
     borderColor: "border-purple-100",
     description:
-      "Our advanced assembly automation systems that enhance productivity, reduce errors, and ensure quality which includes",
+      "Our advanced assembly automation systems that enhance productivity, reduce errors, and ensure quality which includes.",
     features: [
       "Conveyor Lines",
       "Cellular Lines",
@@ -58,7 +58,7 @@ const services = [
   },
   {
     title: "Traceability",
-    href: "/solutions/production-traceability",
+    href: "/solutions/traceability",
     icon: <ScanLine className="h-6 w-6" />,
     gradient: "from-emerald-500 to-teal-500",
     gradientHover: "group-hover:from-emerald-600 group-hover:to-teal-600",
@@ -66,14 +66,14 @@ const services = [
     textColor: "text-emerald-600",
     borderColor: "border-emerald-100",
     description:
-      "End-to-end visibility across your production ecosystem. From raw materials to finished products, every part, every step, and every process is tracked and verified",
+      "End-to-end visibility across your production ecosystem. From raw materials to finished products, every part, every step, and every process is tracked and verified.",
     features: [
       "Part Traceability",
       "Process Traceability",
       "Interface with the Legacy Machines",
     ],
     stats: { value: "From Track", label: "to Transparency" },
-    image: "/assets/scanhome.webp",
+    image: "/assets/traceability3d.webp",
   },
   {
     title: "Digital Transformation",
@@ -85,14 +85,14 @@ const services = [
     textColor: "text-indigo-600",
     borderColor: "border-indigo-100",
     description:
-      "Our Facteyes integrates AI, IoT, and Industry 4.0 technologies into a powerful digital transformation platform that turns insights into impact, and machines into smart collaborators",
+      "Our Facteyes integrates AI, IoT, and Industry 4.0 technologies into a powerful digital transformation platform that turns insights into impact, and machines into smart collaborators.",
     features: [
       "Real-time data Analytics",
       "OEE, Cp-CPK, MSA data analytics",
       "Predictive Maintenance",
     ],
     stats: { value: "From Data", label: "to Decisions" },
-    image: "/assets/digitalhomeimg.webp",
+    image: "/assets/facteyesdashboard.webp",
   },
 ];
 
@@ -145,7 +145,7 @@ const AboutSection = () => {
 
           <p className="text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Unlock smarter manufacturing through intelligent automation built to
-            boost efficiency, quality, and performance
+            boost efficiency, quality, and performance.
           </p>
         </motion.div>
 

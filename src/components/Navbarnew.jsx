@@ -38,63 +38,63 @@ import {
 import { SiIntel } from "react-icons/si"; // Example for electronics (brand-like)
 
 const navLinks = [
-  {
-    name: "Products",
-    href: "products",
-    type: "scroll",
-    columns: [
-      {
-        heading: "Our Products",
-        links: [
-          {
-            name: "MTS Software",
-            href: "/products/mts-test-software",
-            icon: <FaLaptopCode className="text-blue-600" />,
-          },
-          {
-            name: "Traceware Platform",
-            href: "/products/traceware-platform",
-            icon: <FaDatabase className="text-green-600" />,
-          },
-          {
-            name: "Automated Test Cells",
-            href: "/products/automated-test-cells",
-            icon: <FaTools className="text-amber-600" />,
-          },
-          {
-            name: "Automated Assembly Cells",
-            href: "/products/automated-assembly-cells",
-            icon: <FaIndustry className="text-purple-600" />,
-          },
-          {
-            name: "Robotic Automation Cells",
-            href: "/products/robotic-automation-cells",
-            icon: <FaRobot className="text-rose-600" />,
-          },
-          // {
-          //   name: "Control Systems",
-          //   href: "/products/control-systems",
-          //   icon: <FaSlidersH className="text-indigo-600" />,
-          // },
-          {
-            name: "RF Shielded Test Enclosures",
-            href: "/products/rf-shielded-test-enclosures",
-            icon: <FaBroadcastTower className="text-pink-600" />,
-          },
-          {
-            name: "BON Test Fixtures",
-            href: "/products/bon-test-fixtures",
-            icon: <FaCogs className="text-teal-600" />,
-          },
-          // {
-          //   name: "Industrial Computers",
-          //   href: "/products/industrial-computers",
-          //   icon: <FaDesktop className="text-gray-700" />,
-          // },
-        ],
-      },
-    ],
-  },
+  // {
+  //   name: "Products",
+  //   href: "products",
+  //   type: "scroll",
+  //   columns: [
+  //     {
+  //       heading: "Our Products",
+  //       links: [
+  //         {
+  //           name: "MTS Software",
+  //           href: "/products/mts-test-software",
+  //           icon: <FaLaptopCode className="text-blue-600" />,
+  //         },
+  //         {
+  //           name: "Traceware Platform",
+  //           href: "/products/traceware-platform",
+  //           icon: <FaDatabase className="text-green-600" />,
+  //         },
+  //         {
+  //           name: "Automated Test Cells",
+  //           href: "/products/automated-test-cells",
+  //           icon: <FaTools className="text-amber-600" />,
+  //         },
+  //         {
+  //           name: "Automated Assembly Cells",
+  //           href: "/products/automated-assembly-cells",
+  //           icon: <FaIndustry className="text-purple-600" />,
+  //         },
+  //         {
+  //           name: "Robotic Automation Cells",
+  //           href: "/products/robotic-automation-cells",
+  //           icon: <FaRobot className="text-rose-600" />,
+  //         },
+  //         // {
+  //         //   name: "Control Systems",
+  //         //   href: "/products/control-systems",
+  //         //   icon: <FaSlidersH className="text-indigo-600" />,
+  //         // },
+  //         {
+  //           name: "RF Shielded Test Enclosures",
+  //           href: "/products/rf-shielded-test-enclosures",
+  //           icon: <FaBroadcastTower className="text-pink-600" />,
+  //         },
+  //         {
+  //           name: "BON Test Fixtures",
+  //           href: "/products/bon-test-fixtures",
+  //           icon: <FaCogs className="text-teal-600" />,
+  //         },
+  //         // {
+  //         //   name: "Industrial Computers",
+  //         //   href: "/products/industrial-computers",
+  //         //   icon: <FaDesktop className="text-gray-700" />,
+  //         // },
+  //       ],
+  //     },
+  //   ],
+  // },
 
   {
     name: "Solutions",
@@ -115,8 +115,8 @@ const navLinks = [
             icon: <FaRobot className="text-orange-600" />,
           },
           {
-            name: "Production Traceability",
-            href: "/solutions/production-traceability",
+            name: "Traceability",
+            href: "/solutions/traceability",
             icon: <FaRoute className="text-purple-600" />,
           },
           {
@@ -218,9 +218,26 @@ const navLinks = [
     ],
   },
 
+  // {
+  //   name: "Contact",
+  //   href: "/#contact",
+  //   type: "scroll",
+  //   columns: [
+  //     {
+  //       heading: "Get in Touch",
+  //       links: [
+  //         {
+  //           name: "Customer Care",
+  //           href: "/#contact",
+  //           icon: <FaHeadset className="text-blue-600" />,
+  //         },
+  //       ],
+  //     },
+  //   ],
+  // },
   {
     name: "Contact",
-    href: "/#contact",
+    href: "contact",
     type: "scroll",
     columns: [
       {
@@ -228,7 +245,7 @@ const navLinks = [
         links: [
           {
             name: "Customer Care",
-            href: "/#contact",
+            href: "contact",
             icon: <FaHeadset className="text-blue-600" />,
           },
         ],
@@ -291,19 +308,36 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScrollListener);
   }, [pathname]);
 
+  // const scrollToSection = (e, id) => {
+  //   e.preventDefault();
+  //   setActiveSection(id);
+
+  //   if (pathname !== "/") {
+  //     router.push("/");
+  //     setTimeout(() => {
+  //       const el = document.getElementById(id);
+  //       if (el) {
+  //         const offsetTop = el.offsetTop - 80;
+  //         window.scrollTo({ top: offsetTop, behavior: "smooth" });
+  //       }
+  //     }, 300);
+  //   } else {
+  //     const el = document.getElementById(id);
+  //     if (el) {
+  //       const offsetTop = el.offsetTop - 80;
+  //       window.scrollTo({ top: offsetTop, behavior: "smooth" });
+  //     }
+  //   }
+
+  //   setMobileMenuOpen(false);
+  //   setActiveDropdown(null);
+  // };
   const scrollToSection = (e, id) => {
     e.preventDefault();
     setActiveSection(id);
 
     if (pathname !== "/") {
-      router.push("/");
-      setTimeout(() => {
-        const el = document.getElementById(id);
-        if (el) {
-          const offsetTop = el.offsetTop - 80;
-          window.scrollTo({ top: offsetTop, behavior: "smooth" });
-        }
-      }, 300);
+      router.push(`/#${id}`);
     } else {
       const el = document.getElementById(id);
       if (el) {
@@ -368,13 +402,13 @@ const Navbar = () => {
             >
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
-               <Image
-  src="/assets/micrologic.png"
-  alt="Micrologic"
-  className="h-12 w-auto relative z-10"
-  width={220}
-  height={60}
-/>
+                <Image
+                  src="/assets/micrologic.png"
+                  alt="Micrologic"
+                  className="h-12 w-auto relative z-10"
+                  width={220}
+                  height={60}
+                />
               </div>
             </Link>
 
@@ -389,6 +423,7 @@ const Navbar = () => {
                   return (
                     <Link
                       key={link.name}
+                      // href={`#${link.href}`}
                       href={`#${link.href}`}
                       onClick={(e) => scrollToSection(e, link.href)}
                       className="ml-6 inline-flex items-center px-5 py-2.5 rounded-full text-white font-medium 
@@ -425,25 +460,47 @@ const Navbar = () => {
                         </span>
                       </Link>
                     ) : (
+                      //     <a
+                      //       href={`#${link.href}`}
+                      //       onClick={(e) => scrollToSection(e, link.href)}
+                      //       className={`relative px-4 py-2 text-[15px] font-medium transition-colors duration-300
+                      //      ${
+                      //        isActive
+                      //          ? "text-blue-600"
+                      //          : "text-gray-700 hover:text-blue-600"
+                      //      }`}
+                      //     >
+                      //       <span className="relative flex items-center gap-1">
+                      //         {link.name}
+                      //         {link.columns && (
+                      //           <ChevronDown
+                      //             className={`w-3.5 h-3.5 transition-transform duration-300
+                      // ${activeDropdown === link.name ? "rotate-180" : ""}`}
+                      //           />
+                      //         )}
+                      //         <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                      //       </span>
+                      //     </a>
                       <a
                         href={`#${link.href}`}
-                        onClick={(e) => scrollToSection(e, link.href)}
+                        onClick={(e) => {
+                          if (link.columns) {
+                            e.preventDefault();
+                          } else {
+                            scrollToSection(e, link.href);
+                          }
+                        }}
                         className={`relative px-4 py-2 text-[15px] font-medium transition-colors duration-300 
-                       ${
-                         isActive
-                           ? "text-blue-600"
-                           : "text-gray-700 hover:text-blue-600"
-                       }`}
+  ${isActive ? "text-blue-600" : "text-gray-700 hover:text-blue-600"}`}
                       >
                         <span className="relative flex items-center gap-1">
                           {link.name}
                           {link.columns && (
                             <ChevronDown
                               className={`w-3.5 h-3.5 transition-transform duration-300 
-                  ${activeDropdown === link.name ? "rotate-180" : ""}`}
+        ${activeDropdown === link.name ? "rotate-180" : ""}`}
                             />
                           )}
-                          <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
                         </span>
                       </a>
                     )}
@@ -567,7 +624,7 @@ const Navbar = () => {
                 alt="Micrologic"
                 className="h-8 w-auto"
                 width={140}
-  height={40}
+                height={40}
               />
               <button
                 onClick={() => setMobileMenuOpen(false)}

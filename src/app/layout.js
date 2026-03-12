@@ -69,7 +69,7 @@ import Navbar from "@/components/Navbarnew";
 import Footer from "@/components/Footer";
 import CookieBanner from "@/components/CookieBanner";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import ChatBot from "@/components/ChatBot";
+// import ChatBot from "@/components/ChatBot";
 
 export const metadata = {
   title: "Micrologic Integrated Systems | Automated Assembly & Test Solutions",
@@ -159,7 +159,7 @@ export default function RootLayout({ children }) {
 
         {/* Floating components */}
         <WhatsAppButton />
-        <ChatBot />
+        {/* <ChatBot /> */}
 
         {/* Cookie Consent */}
         <CookieBanner />

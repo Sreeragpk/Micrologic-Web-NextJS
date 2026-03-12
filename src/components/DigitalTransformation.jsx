@@ -58,7 +58,14 @@ const DigitalTransformation = () => {
           animate={{ scale: 1 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
         >
-          <Image
+          {/* <Image
+            src="/assets/digitalimagefinal.webp"
+            alt="Digital Transformation"
+            fill
+            className="object-cover object-center"
+            priority
+          /> */}
+              <Image
             src="/assets/digitalimagefinal.webp"
             alt="Digital Transformation"
             fill

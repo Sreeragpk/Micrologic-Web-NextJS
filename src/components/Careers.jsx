@@ -464,11 +464,11 @@ export default function Careers() {
             <span className="block text-transparent bg-clip-text bg-blue-600">Automation</span>
           </h1>
           <p className="max-w-3xl mx-auto text-xl md:text-2xl leading-relaxed text-gray-100">
-            At Micrologic, we don't just work together — we innovate, build and create together. Behind every
+            At Micrologic, we don&apos;t just work together — we innovate, build and create together. Behind every
             breakthrough is a team that believes and trusts in each other.
           </p>
 
-          <motion.div
+          {/* <motion.div
             className="mt-10"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -483,7 +483,7 @@ export default function Careers() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </a>
-          </motion.div>
+          </motion.div> */}
         </motion.div>
       </section>
 
