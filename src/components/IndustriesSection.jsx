@@ -87,7 +87,7 @@
 import React from "react";
 import Link from "next/link";
 import { Stethoscope, CircuitBoard, ArrowRight } from "lucide-react";
-import { FaCarSide, FaChargingStation } from "react-icons/fa";
+import { FaCarSide, FaChargingStation, FaMicrochip } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const industries = [
@@ -113,7 +113,7 @@ const industries = [
   },
   {
     name: "Electrical & Electronics",
-    icon: <CircuitBoard className="h-12 w-12 md:h-16 md:w-16" />,
+    icon: <FaMicrochip  className="h-12 w-12 md:h-16 md:w-16" />,
     color: "text-indigo-500",
     bgColor: "bg-indigo-500/10",
     hoverBg: "group-hover:bg-indigo-500",

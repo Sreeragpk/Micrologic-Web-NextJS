@@ -150,7 +150,7 @@ const navLinks = [
           {
             name: "Electrical & Electronics",
             href: "/industries/electrical-and-electronics-automation",
-            icon: <CircuitBoard className="text-green-600" />,
+            icon: <FaMicrochip  className="text-green-600" />,
           },
           {
             name: "Medical Devices",
