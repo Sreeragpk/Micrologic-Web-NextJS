@@ -265,7 +265,7 @@ export default function AutoElectronicsShowcase() {
 
       {/* Why Choose Us Section */}
       {/* Why Choose Us Section */}
-      <section className="relative bg-gradient-to-b from-slate-50 to-white py-20 lg:py-28 overflow-hidden">
+      <section className="relative bg-gradient-to-b from-slate-50 to-white py-16 lg:py-16 overflow-hidden">
         {/* Background Elements */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(99,102,241,0.03)_1px,transparent_0)] bg-[size:32px_32px]"></div>
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-indigo-100/40 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>

@@ -339,7 +339,7 @@ const handleSubmit = async (e) => {
   return (
     <section
       id="contact"
-      className="relative bg-slate-50 py-20 sm:py-24 lg:py-28 overflow-hidden"
+      className="relative bg-slate-50 py-14 sm:py-16 lg:py-18 overflow-hidden"
     >
       {/* Background Elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -354,7 +354,7 @@ const handleSubmit = async (e) => {
           <span className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 rounded-full shadow-sm mb-5">
             <Headphones className="w-4 h-4 text-indigo-600" />
             <span className="text-sm font-medium text-slate-700">
-              We're Here to Help
+              We&apos;re Here to Help
             </span>
           </span>
 

@@ -73,7 +73,7 @@ const services = [
       "Interface with the Legacy Machines",
     ],
     stats: { value: "From Track", label: "to Transparency" },
-    image: "/assets/traceability3d.webp",
+    image: "/assets/traceability3dimagelatest.webp",
   },
   {
     title: "Digital Transformation",

@@ -30,25 +30,26 @@ import { motion } from "framer-motion";
 
 function AutoPlayYouTube() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-white p-6">
+    <div className="bg-white px-4 sm:px-6 py-8">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.6 }}
-        className="w-full max-w-6xl space-y-6"
+        transition={{ duration: 0.5 }}
+        className="w-full max-w-5xl mx-auto space-y-4"
       >
-        {/* Simple Header */}
-        <div className="flex items-baseline justify-between">
-          <h1 className="text-3xl font-light text-black">
+        {/* Header */}
+        <div className="flex items-center justify-between">
+          <h1 className="text-xl sm:text-2xl md:text-3xl font-light text-black">
             Media Player
           </h1>
-          <span className="text-sm text-neutral-400">
+
+          <span className="text-xs sm:text-sm text-neutral-400">
             Now playing
           </span>
         </div>
 
         {/* Video Container */}
-        <div className="border border-neutral-200 bg-neutral-50">
+        <div className="border border-neutral-200 bg-neutral-50 rounded-md overflow-hidden shadow-sm">
           <div className="relative bg-black">
             <div className="relative pb-[56.25%]">
               <iframe
@@ -61,15 +62,17 @@ function AutoPlayYouTube() {
               />
             </div>
           </div>
-          
-          <div className="p-4 flex items-center justify-between text-sm">
-            <div className="flex items-center gap-4 text-neutral-600">
-              <span className="flex items-center gap-2">
+
+          {/* Controls */}
+          <div className="px-3 py-2 flex items-center justify-between text-xs sm:text-sm">
+            <div className="flex items-center gap-3 text-neutral-600">
+              <span className="flex items-center gap-1">
                 <span className="w-1 h-1 bg-neutral-900 rounded-full" />
                 Auto
               </span>
               <span>Loop</span>
             </div>
+
             <button className="text-black hover:text-neutral-600 transition-colors">
               Fullscreen
             </button>

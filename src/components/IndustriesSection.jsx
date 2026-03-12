@@ -181,7 +181,7 @@ const iconVariants = {
 
 const IndustriesSection = () => {
   return (
-    <section id="industries" className="relative py-24 lg:py-32 bg-slate-950 overflow-hidden">
+    <section id="industries" className="relative py-20 lg:py-32 bg-slate-950 overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
         {/* Grid Pattern */}
