@@ -303,7 +303,8 @@
 // }
 "use client";
 
-import { GoogleMap, useJsApiLoader, MarkerF } from "@react-google-maps/api";
+import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
+import { useEffect, useRef } from "react";
 
 const center = {
   lat: 12.873259,
@@ -311,9 +312,26 @@ const center = {
 };
 
 export default function LocationMap({ className = "" }) {
+  const mapRef = useRef(null);
+
   const { isLoaded } = useJsApiLoader({
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
+    libraries: ["marker"], // required for AdvancedMarkerElement
   });
+
+  useEffect(() => {
+    if (!mapRef.current || !window.google) return;
+
+    const marker = new google.maps.marker.AdvancedMarkerElement({
+      map: mapRef.current,
+      position: center,
+      title: "Micrologic",
+    });
+
+    return () => {
+      marker.map = null;
+    };
+  }, [isLoaded]);
 
   if (!isLoaded) {
     return (
@@ -331,15 +349,14 @@ export default function LocationMap({ className = "" }) {
         center={center}
         zoom={17}
         mapContainerStyle={{ width: "100%", height: "100%" }}
+        onLoad={(map) => (mapRef.current = map)}
         options={{
           disableDefaultUI: true,
           zoomControl: true,
           mapTypeId: "hybrid",
           gestureHandling: "greedy",
         }}
-      >
-        <MarkerF position={center} />
-      </GoogleMap>
+      />
     </div>
   );
 }

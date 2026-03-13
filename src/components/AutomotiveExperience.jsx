@@ -1,63 +1,4 @@
-// import { motion } from "framer-motion";
-// import experienceImg from "../assets/exp.png";
 
-// const AutomotiveExperience = () => {
-//   return (
-//     <section className="relative py-24 lg:py-32 bg-slate-950 overflow-hidden">
-
-//       {/* Subtle Grid Background (MATCHED) */}
-//       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
-
-//       {/* Top Gradient Fade (MATCHED) */}
-//       <div className="absolute top-0 left-0 right-0 h-96  pointer-events-none" />
-
-//       <div className="relative container mx-auto px-6 lg:px-8 z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-
-//         {/* Text */}
-//         <motion.div
-//           initial={{ opacity: 0, y: 40 }}
-//           whileInView={{ opacity: 1, y: 0 }}
-//           transition={{ duration: 0.8, ease: "easeOut" }}
-//           viewport={{ once: true }}
-//         >
-//           <h2 className="text-sm font-bold tracking-widest text-slate-500 uppercase mb-2">
-//             Automotive Solutions
-//           </h2>
-
-//           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6 text-white tracking-tight">
-//             Automotive <span className="text-slate-600">Experience</span>
-//           </h1>
-
-//           <p className="text-slate-400 max-w-xl text-lg leading-relaxed">
-//             Delivering next-generation automation, intelligent manufacturing,
-//             and validation systems for ECUs, ADAS, powertrain, and connected vehicle platforms.
-//           </p>
-//         </motion.div>
-
-//         {/* Image */}
-//         <motion.div
-//           initial={{ opacity: 0, scale: 0.9 }}
-//           whileInView={{ opacity: 1, scale: 1 }}
-//           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-//           viewport={{ once: true }}
-//           className="relative"
-//         >
-//           {/* Soft Glow Behind Image */}
-//           <div className="absolute -inset-6 rounded-3xl " />
-
-//           <img
-//             src={experienceImg}
-//             alt="Automotive Experience"
-//             className="relative z-10 w-full max-h-[520px] object-contain rounded-3xl shadow-2xl"
-//           />
-//         </motion.div>
-
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default AutomotiveExperience;
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -201,7 +142,7 @@ export default function AutoElectronicsShowcase() {
         </div>
 
         {/* Categories Grid */}
-        <div className="relative py-20 lg:py-24">
+    <div className="relative py-12 lg:py-14">
           {/* Background Pattern */}
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(0,0,0,0.05)_1px,transparent_0)] bg-[size:40px_40px]"></div>
 
@@ -265,7 +206,7 @@ export default function AutoElectronicsShowcase() {
 
       {/* Why Choose Us Section */}
       {/* Why Choose Us Section */}
-      <section className="relative bg-gradient-to-b from-slate-50 to-white py-16 lg:py-16 overflow-hidden">
+     <section className="relative bg-gradient-to-b from-slate-50 to-white pt-8 pb-16 lg:pt-10 lg:pb-16 overflow-hidden">
         {/* Background Elements */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(99,102,241,0.03)_1px,transparent_0)] bg-[size:32px_32px]"></div>
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-indigo-100/40 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>

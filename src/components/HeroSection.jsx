@@ -46,7 +46,7 @@ export default HeroSection;
 //   const [showLaunch, setShowLaunch] = useState(true);
 
 //   useEffect(() => {
-//     const duration = 10 * 1000;
+//     const duration = 15 * 1000;
 //     const end = Date.now() + duration;
 
 //     const colors = [
@@ -55,91 +55,43 @@ export default HeroSection;
 //       "#00BFFF",
 //       "#32CD32",
 //       "#FF1493",
-//       "#FFFFFF"
+//       "#FFFFFF",
 //     ];
 
-//     // Side cannons
-//     const launchBurst = () => {
-//       confetti({
-//         particleCount: 70,
-//         angle: 65,
-//         spread: 80,
-//         origin: { x: 0, y: 0.65 },
-//         colors,
-//         startVelocity: 45
-//       });
-
-//       confetti({
-//         particleCount: 70,
-//         angle: 115,
-//         spread: 80,
-//         origin: { x: 1, y: 0.65 },
-//         colors,
-//         startVelocity: 45
-//       });
-//     };
-
-//     // Top corner confetti
-//     const topConfetti = () => {
-//       confetti({
-//         particleCount: 40,
-//         angle: 300,
-//         spread: 70,
-//         origin: { x: 0, y: 0 },
-//         colors
-//       });
-
-//       confetti({
-//         particleCount: 40,
-//         angle: 240,
-//         spread: 70,
-//         origin: { x: 1, y: 0 },
-//         colors
-//       });
-//     };
-
-//     // Sky fireworks
 //     const firework = (x) => {
 //       confetti({
-//         particleCount: 40,
+//         particleCount: 50,
 //         spread: 360,
-//         origin: { x, y: 0.2 + Math.random() * 0.3 },
-//         colors,
 //         startVelocity: 30,
+//         origin: { x, y: 0.25 + Math.random() * 0.25 },
+//         colors,
 //         ticks: 220,
-//         scalar: 1.1
+//         scalar: 1.1,
 //       });
 //     };
 
-//     // Sparkle rain (lightweight)
 //     const sparkleRain = () => {
 //       confetti({
-//         particleCount: 12,
+//         particleCount: 14,
 //         angle: 270,
-//         spread: 40,
+//         spread: 35,
 //         origin: { x: Math.random(), y: 0 },
 //         colors: ["#FFD700", "#FFFFFF"],
 //         startVelocity: 10,
-//         gravity: 1.4,
-//         ticks: 200,
-//         scalar: 0.6
+//         gravity: 1.5,
+//         ticks: 220,
+//         scalar: 0.7,
 //       });
 //     };
 
-//     launchBurst();
-//     setTimeout(topConfetti, 500);
-
 //     const frame = () => {
-
-//       // side fountain crackers
 //       confetti({
 //         particleCount: 3,
 //         angle: 60,
 //         spread: 45,
 //         origin: { x: 0, y: 0.75 },
+//         startVelocity: 28,
 //         colors,
-//         startVelocity: 30,
-//         ticks: 200
 //       });
 
 //       confetti({
@@ -147,51 +99,35 @@ export default HeroSection;
 //         angle: 120,
 //         spread: 45,
 //         origin: { x: 1, y: 0.75 },
+//         startVelocity: 28,
 //         colors,
-//         startVelocity: 30,
-//         ticks: 200
 //       });
 
-//       // random fireworks
-//       if (Math.random() < 0.02) firework(0.2);
-//       if (Math.random() < 0.02) firework(0.8);
+//       if (Math.random() < 0.03) firework(0.2);
+//       if (Math.random() < 0.03) firework(0.8);
+//       if (Math.random() < 0.04) sparkleRain();
 
-//       // sparkle rain
-//       if (Math.random() < 0.03) sparkleRain();
-
-//       if (Date.now() < end) {
-//         requestAnimationFrame(frame);
-//       }
+//       if (Date.now() < end) requestAnimationFrame(frame);
 //     };
 
-//     setTimeout(frame, 600);
+//     requestAnimationFrame(frame);
 
-//     // final celebration burst
 //     setTimeout(() => {
 //       confetti({
-//         particleCount: 90,
+//         particleCount: 120,
 //         spread: 100,
-//         angle: 65,
-//         origin: { x: 0, y: 0.7 },
-//         colors
+//         origin: { y: 0.7 },
+//         colors,
 //       });
+//     }, 13000);
 
-//       confetti({
-//         particleCount: 90,
-//         spread: 100,
-//         angle: 115,
-//         origin: { x: 1, y: 0.7 },
-//         colors
-//       });
-//     }, 8800);
-
-//     setTimeout(() => setShowLaunch(false), 10000);
-
+//     setTimeout(() => setShowLaunch(false), 15000);
 //   }, []);
 
 //   return (
-//     <div className="relative w-full h-[50vh] md:h-[60vh] lg:h-[69vh] overflow-hidden">
+//     <section className="relative w-full h-[60vh] md:h-[75vh] lg:h-[85vh] overflow-hidden">
 
+//       {/* Background Video */}
 //       <video
 //         autoPlay
 //         muted
@@ -205,27 +141,37 @@ export default HeroSection;
 //         <source src="/assets/hero-video.mp4" type="video/mp4" />
 //       </video>
 
-//       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
+//       {/* Gradient Overlay */}
+//       <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-black/80" />
 
+//       {/* Launch Announcement */}
 //       {showLaunch && (
-//         <div className="absolute top-24 left-1/2 -translate-x-1/2 z-20 animate-bounce bg-yellow-400 text-black px-5 py-2 rounded-full font-semibold shadow-lg">
-//           🌐 Announcing Our Newly Redesigned Website
+//         <div className="absolute top-20 left-1/2 -translate-x-1/2 z-20 animate-bounce">
+//           <div className="bg-yellow-400 text-black px-6 py-2 rounded-full text-sm md:text-base font-semibold shadow-xl">
+//             🌐 Newly Redesigned Website Launched
+//           </div>
 //         </div>
 //       )}
 
-//       <div className="relative z-10 flex items-center justify-center h-full px-6 text-center">
-//         <div className="max-w-4xl">
-//           <h1 className="text-white font-extrabold text-4xl md:text-5xl lg:text-6xl">
+//       {/* Content */}
+//       <div className="relative z-10 flex items-center justify-center h-full px-6">
+//         <div className="max-w-5xl text-center">
+
+//           <h1 className="text-white font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight">
 //             Empowering Manufacturing Excellence
 //           </h1>
 
-//           <p className="mt-4 text-white text-xl md:text-2xl">
-//             Fuelling Innovation, Driving Automation
+//           <p className="mt-4 text-gray-200 text-lg sm:text-xl md:text-2xl">
+//             Fuelling Innovation. Driving Automation.
 //           </p>
+
 //         </div>
 //       </div>
 
-//     </div>
+//       {/* Bottom Fade */}
+//       <div className="absolute bottom-0 w-full h-24 bg-gradient-to-t from-black/80 to-transparent" />
+
+//     </section>
 //   );
 // };
 

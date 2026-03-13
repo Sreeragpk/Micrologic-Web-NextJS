@@ -4,19 +4,19 @@ import React from "react";
 const partners = [
   {
     title: "Machine Vision Software",
-    logo: "https://micrologicglobal.com/wp-content/uploads/2021/10/nwuro.jpg",
+    logo: "/assets/neurocheck-logo.svg",
     link: "https://www.neurocheck.com/",
     desc: "NeuroCheck from Germany is an innovative Machine Vision Platform provider with over 25+ years of industry experience.",
   },
   {
     title: "Industrial Robotics",
-    logo: "https://micrologicglobal.com/wp-content/uploads/2023/02/Epson-Emblem-2048x1152.png",
+    logo: "/assets/logo-epson_420x100.png",
     link: "https://epson.com/industrial-robots-factory-automation",
     desc: "Epson, a world-class Japanese company, manufactures industrial robots trusted by the world’s top manufacturers.",
   },
   {
     title: "Automated Test Platform",
-    logo: "https://micrologicglobal.com/wp-content/uploads/2024/05/logo-6tl.png",
+    logo: "/assets/logo-6tl.png",
     link: "https://6tlengineering.com/",
     desc: "6TL from Spain provides advanced and modular test solutions for electronics manufacturers worldwide.",
   },
