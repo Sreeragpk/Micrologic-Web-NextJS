@@ -258,24 +258,25 @@ const Footer = () => {
       <div className="container mx-auto px-6 lg:px-12 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
-<div className="text-center">
-  <Image
-    src="/assets/micrologicnew.png"
-    alt="Micrologic Logo"
-    width={220}
-    height={60}
-    className="mb-6 mx-auto"
-    priority
-  />
+          <div className="text-center">
+            <Image
+              src="/assets/micrologicnew.png"
+              alt="Micrologic Logo"
+              width={220}
+              height={60}
+              className="mb-6 mx-auto"
+              priority
+            />
 
-  <div className="flex justify-center items-start gap-3 text-gray-400 max-w-sm mx-auto">
-    <MapPin size={18} className="mt-1 shrink-0 text-blue-400" />
-    <p className="text-sm leading-relaxed break-words text-left">
-      #22-D1, Micrologic Drive, KIADB, Kumbalgodu Industrial Area, NH 275,
-      1st Phase, Bengaluru, Karnataka 560&nbsp;074
-    </p>
-  </div>
-</div>
+            <div className="flex justify-center items-start gap-3 text-gray-400 max-w-sm mx-auto">
+              <MapPin size={18} className="mt-1 shrink-0 text-blue-400" />
+
+              <p className="text-sm leading-relaxed break-words text-left">
+                #22-D1, &quot;Micrologic Drive&quot;, KIADB Industrial Area, NH
+                275, 1st Phase, Kumbalagodu, Bengaluru, Karnataka 560&nbsp;074
+              </p>
+            </div>
+          </div>
 
           {/* Solutions */}
           <div>
@@ -372,7 +373,6 @@ const Footer = () => {
                   Medical Devices
                 </a>
               </li>
-
             </ul>
           </div>
           {/* Contact */}

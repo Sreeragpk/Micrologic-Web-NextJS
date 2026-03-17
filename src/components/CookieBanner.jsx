@@ -1,3 +1,4 @@
+// src/components/CookieBanner.jsx
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
@@ -6,21 +7,21 @@ const CookieBanner = () => {
   const [visible, setVisible] = useState(false);
 
   // Load Google Analytics
-  const loadAnalytics = () => {
-    if (window.gtag) return;
+const loadAnalytics = () => {
+  if (window.gtag) return;
 
-    const script = document.createElement("script");
-    script.src = "https://www.googletagmanager.com/gtag/js?id=G-M5WNY7RPWZ";
-    script.async = true;
-    document.head.appendChild(script);
+  const script = document.createElement("script");
+  script.src = "https://www.googletagmanager.com/gtag/js?id=G-5ZZ01ZESR3";
+  script.async = true;
+  document.head.appendChild(script);
 
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){window.dataLayer.push(arguments);}
-    window.gtag = gtag;
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){window.dataLayer.push(arguments);}
+  window.gtag = gtag;
 
-    gtag("js", new Date());
-    gtag("config", "G-M5WNY7RPWZ");
-  };
+  gtag("js", new Date());
+  gtag("config", "G-5ZZ01ZESR3");
+};
 
   // Check cookie consent on load
   useEffect(() => {

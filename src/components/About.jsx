@@ -153,7 +153,7 @@ const StatsCounter = () => {
   const stats = [
     { number: 2000, suffix: "+", label: "Installations" },
     { number: 20, suffix: "+", label: "Years of Excellence" },
-    { number: 50, suffix: "+", label: "Happy Clients" },
+    { number: 50, suffix: "+", label: "Clients" },
   ];
 
   return (
@@ -274,13 +274,13 @@ const CoreCompetency = () => {
 
   return (
     <motion.div
-      className="mt-24 py-16"
+     className="mt-6 py-8"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
     >
-      <h2 className="text-4xl font-extrabold text-center text-blue-600 mb-12">
+      <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-center text-blue-600 mb-12">
         Our Core Competencies
       </h2>
 

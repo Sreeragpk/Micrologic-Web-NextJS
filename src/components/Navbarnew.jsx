@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { X, ChevronDown, ArrowRight, Menu, CircuitBoard } from "lucide-react";
 import Link from "next/link";
@@ -150,7 +151,7 @@ const navLinks = [
           {
             name: "Electrical & Electronics",
             href: "/industries/electrical-and-electronics-automation",
-            icon: <FaMicrochip  className="text-green-600" />,
+            icon: <FaMicrochip className="text-green-600" />,
           },
           {
             name: "Medical Devices",
@@ -400,16 +401,24 @@ const Navbar = () => {
               }}
               className="flex items-center gap-3 group"
             >
-              <div className="relative">
+<motion.div
+  layoutId="site-logo"
+  initial={{ opacity: 0, scale: 0.9 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.35 }}
+  className="relative group"
+>
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
+
                 <Image
-                  src="/assets/micrologic.png"
-                  alt="Micrologic"
-                  className="h-12 w-auto relative z-10"
-                  width={220}
-                  height={60}
-                />
-              </div>
+  src="/assets/micrologic.png"
+  alt="Micrologic"
+  className="h-12 w-auto relative z-10"
+  width={220}
+  height={60}
+  priority
+/>
+              </motion.div>
             </Link>
 
             {/* Desktop Nav */}
@@ -619,13 +628,17 @@ const Navbar = () => {
           {/* Mobile Header */}
           <div className="p-6 border-b border-gray-100">
             <div className="flex items-center justify-between">
-              <Image
-                src="/assets/micrologic.png"
-                alt="Micrologic"
-                className="h-8 w-auto"
-                width={140}
-                height={40}
-              />
+             <div className="relative">
+                <Image
+                  src="/assets/micrologic.png"
+                  alt="Micrologic"
+                  className="h-8 w-auto"
+                  width={140}
+                  height={40}
+                  priority
+                />
+              </div>
+
               <button
                 onClick={() => setMobileMenuOpen(false)}
                 className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"

@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.micrologicglobal.com
+
+# Sitemaps
+Sitemap: https://www.micrologicglobal.com/sitemap.xml

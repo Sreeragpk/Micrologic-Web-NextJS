@@ -42,7 +42,7 @@ function CompanyVideo() {
         <div className="relative w-full overflow-hidden rounded-xl shadow-lg">
           <div className="relative pb-[56.25%]">
             <iframe
-              src="https://www.youtube.com/embed/ffwmrKdZBSE?autoplay=1&mute=1&loop=1&playlist=ffwmrKdZBSE"
+              src="https://www.youtube.com/embed/PNj_ujIpY-k?autoplay=1&mute=1&loop=1&playlist=PNj_ujIpY-k"
               title="Micrologic Company Video"
               frameBorder="0"
               allow="autoplay; encrypted-media"
@@ -57,3 +57,5 @@ function CompanyVideo() {
 }
 
 export default CompanyVideo;
+
+

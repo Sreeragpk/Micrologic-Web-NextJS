@@ -2088,7 +2088,7 @@ const TesterDiagram = () => {
                 </div>
                 <div className="overflow-hidden w-full">
                   <Image
-                    src="/assets/testerMachine.webp"
+                    src="/assets/testerMachinenew.webp"
                     alt="Tester machine"
                     width={500}
                     height={400}

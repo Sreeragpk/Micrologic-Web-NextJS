@@ -36,7 +36,7 @@ const services = [
     image: "/assets/MCU EOL.jpg",
   },
   {
-    title: "Assembly Solutions",
+    title: "Assembly Automation",
     href: "/solutions/assembly-automation",
     icon: <Cog className="h-6 w-6" />,
     gradient: "from-purple-500 to-pink-500",

@@ -82,48 +82,48 @@ export default function ContactForm() {
   //   setIsSubmitted(true);
   //   setTimeout(() => setIsSubmitted(false), 3000);
   // };
-const handleSubmit = async (e) => {
-  e.preventDefault();
-  setIsSubmitting(true);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
 
-  const payload = {
-    ...formData,
-    company: e.target.company.value,
-  };
+    const payload = {
+      ...formData,
+      company: e.target.company.value,
+    };
 
-  try {
-    const res = await fetch(
-      `${process.env.NEXT_PUBLIC_API_URL}/api/contact`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+    try {
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/api/contact`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(payload),
         },
-        body: JSON.stringify(payload),
+      );
+
+      const data = await res.json();
+
+      if (res.ok && data.success) {
+        setIsSubmitted(true);
+
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: "",
+        });
+
+        setTimeout(() => setIsSubmitted(false), 3000);
       }
-    );
-
-    const data = await res.json();
-
-    if (res.ok && data.success) {
-      setIsSubmitted(true);
-
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        subject: "",
-        message: "",
-      });
-
-      setTimeout(() => setIsSubmitted(false), 3000);
+    } catch (error) {
+      console.error("Error sending message:", error);
     }
-  } catch (error) {
-    console.error("Error sending message:", error);
-  }
 
-  setIsSubmitting(false);
-};
+    setIsSubmitting(false);
+  };
 
   const contactInfo = [
     {
@@ -131,11 +131,11 @@ const handleSubmit = async (e) => {
       title: "Visit Our Office",
       primary: (
         <>
-          #22-D1, Micrologic Drive, KIADB, Kumbalgodu Industrial Area,{" "}
-          <span className="whitespace-nowrap">NH 275</span>
+          #22-D1, &quot;Micrologic Drive&quot;, KIADB Industrial Area,
+          <span className="whitespace-nowrap"> NH 275,</span>
         </>
       ),
-      secondary: "1st Phase, Bengaluru, Karnataka 560 074",
+      secondary: "1st Phase, Kumbalagodu, Bengaluru, Karnataka 560 074",
       gradient: "from-blue-500 to-indigo-600",
       bgGradient: "from-blue-50 to-indigo-50",
       iconBg: "bg-blue-100",
@@ -166,8 +166,8 @@ const handleSubmit = async (e) => {
     {
       icon: Clock,
       title: "Business Hours",
-      primary: "Monday - Saturday",
-      secondary: "9:00 AM - 6:00 PM IST",
+      primary: "Mon - Sat, 9:00 AM - 6:00 PM IST",
+      secondary: "",
       gradient: "from-amber-500 to-orange-600",
       bgGradient: "from-amber-50 to-orange-50",
       iconBg: "bg-amber-100",

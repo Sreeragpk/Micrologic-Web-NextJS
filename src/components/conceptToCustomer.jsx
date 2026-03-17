@@ -212,8 +212,8 @@ const ConceptToCustomer = () => {
             {/* Description */}
             <div className="space-y-5 mb-10">
               <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
-                In today's fast-paced world, where speed defines success, 
-                <span className="text-gray-900 font-semibold"> Micrologic's standardized Test and Automation solutions </span> 
+                In today&apos;s fast-paced world, where speed defines success, 
+                <span className="text-gray-900 font-semibold"> Micrologic&apos;s standardized Test and Assembly solutions </span> 
                 shorten development cycles and accelerate time-to-market.
               </p>
 
