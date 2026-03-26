@@ -264,7 +264,7 @@ const Footer = () => {
               alt="Micrologic Logo"
               width={220}
               height={60}
-              className="mb-6 mx-auto"
+              className="mb-6 mx-auto h-auto"
               priority
             />
 

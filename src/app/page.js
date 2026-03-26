@@ -8,12 +8,6 @@ import EvolutionExcellence from "@/components/EvolutionExcellence";
 import AutoPlayYouTube from "@/components/AutoPlayYouTube";
 import ContactForm from "@/components/ContactForm";
 
-export const metadata = {
-  title: "Micrologic Integrated Systems | Automated Assembly & Test Solutions",
-  description:
-    "Micrologic Integrated Systems delivers turnkey automated assembly, testing and traceability solutions.",
-};
-
 export default function Home() {
   return (
     <main>

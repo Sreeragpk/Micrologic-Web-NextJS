@@ -173,7 +173,7 @@ const navLinks = [
         links: [
           {
             name: "About",
-            href: "/about",
+            href: "/about-us",
             icon: <FaInfoCircle className="text-blue-600" />,
           },
           {

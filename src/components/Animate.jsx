@@ -374,12 +374,12 @@ const handleTouchStart = useCallback((e) => {
         transition={{ duration: 0.8 }}
         className="text-center z-10 mb-8 sm:mb-10 lg:mb-12"
       >
-        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold leading-tight">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold leading-tight">
           <span className="text-gray-900">Innovative Solutions for </span>
           <span className="bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-600 bg-clip-text text-transparent">
             Modern Manufacturing
           </span>
-        </h1>
+        </h2>
 
         <div className="w-24 sm:w-32 md:w-40 lg:w-48 h-1 mx-auto mt-4 sm:mt-5 md:mt-6 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full"></div>
       </motion.div>

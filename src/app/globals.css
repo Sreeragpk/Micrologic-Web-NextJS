@@ -61,3 +61,12 @@ font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetic
 .slide-in-from-top-2 {
   animation: slide-in-from-top-2 0.2s ease-out;
 }
+img {
+  user-select: none !important;
+  -webkit-user-drag: none !important;
+}
+
+/* optional (strong protection) */
+img::selection {
+  background: transparent;
+}

@@ -35,6 +35,11 @@ export default function ContactForm() {
   const [isSubjectOpen, setIsSubjectOpen] = useState(false);
   const dropdownRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(-1);
+
+  const [captchaToken, setCaptchaToken] = useState(null);
+const [isMounted, setIsMounted] = useState(false);
+const captchaRef = useRef(null);
+  
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -45,7 +50,11 @@ export default function ContactForm() {
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
-
+useEffect(() => {
+  setTimeout(() => {
+    setIsMounted(true);
+  }, 0);
+}, []);
   const handleKeyDown = (e) => {
     if (!isSubjectOpen) return;
 
@@ -73,7 +82,11 @@ export default function ContactForm() {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-
+  useEffect(() => {
+    window.onTurnstileSuccess = function (token) {
+      setCaptchaToken(token);
+    };
+  }, []);
   // const handleSubmit = async (e) => {
   //   e.preventDefault();
   //   setIsSubmitting(true);
@@ -84,11 +97,18 @@ export default function ContactForm() {
   // };
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!captchaToken) {
+      alert("Please verify captcha");
+      return;
+    }
+
     setIsSubmitting(true);
 
     const payload = {
       ...formData,
       company: e.target.company.value,
+      captchaToken,
     };
 
     try {
@@ -116,6 +136,13 @@ export default function ContactForm() {
           message: "",
         });
 
+        setCaptchaToken(null);
+
+        // reset captcha UI
+        if (window.turnstile) {
+          window.turnstile.reset();
+        }
+
         setTimeout(() => setIsSubmitted(false), 3000);
       }
     } catch (error) {
@@ -124,6 +151,66 @@ export default function ContactForm() {
 
     setIsSubmitting(false);
   };
+  useEffect(() => {
+  if (!isMounted) return;
+
+  const interval = setInterval(() => {
+    if (window.turnstile && captchaRef.current) {
+      window.turnstile.render(captchaRef.current, {
+        sitekey: process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY,
+        callback: (token) => {
+          setCaptchaToken(token);
+        },
+      });
+
+      clearInterval(interval);
+    }
+  }, 300);
+
+  return () => clearInterval(interval);
+}, [isMounted]);
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   setIsSubmitting(true);
+
+  //   const payload = {
+  //     ...formData,
+  //     company: e.target.company.value,
+  //   };
+
+  //   try {
+  //     const res = await fetch(
+  //       `${process.env.NEXT_PUBLIC_API_URL}/api/contact`,
+  //       {
+  //         method: "POST",
+  //         headers: {
+  //           "Content-Type": "application/json",
+  //         },
+  //         body: JSON.stringify(payload),
+  //       },
+  //     );
+
+  //     const data = await res.json();
+
+  //     if (res.ok && data.success) {
+  //       setIsSubmitted(true);
+
+  //       setFormData({
+  //         name: "",
+  //         email: "",
+  //         phone: "",
+  //         subject: "",
+  //         message: "",
+  //       });
+
+  //       setTimeout(() => setIsSubmitted(false), 3000);
+  //     }
+  //   } catch (error) {
+  //     console.error("Error sending message:", error);
+  //   }
+
+  //   setIsSubmitting(false);
+  // };
 
   const contactInfo = [
     {
@@ -213,8 +300,8 @@ export default function ContactForm() {
           </h2>
 
           <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto">
-            Have a question or want to discuss a project? We'd love to hear from
-            you. Send us a message and we'll respond promptly.
+            Have a question or want to discuss a project? We&apos;d love to hear
+            from you. Send us a message and we&apos;ll respond promptly.
           </p>
         </div>
 
@@ -234,7 +321,7 @@ export default function ContactForm() {
                       Send us a Message
                     </h3>
                     <p className="text-sm text-slate-500">
-                      Fill the form below and we'll get back to you
+                      Fill the form below and we&apos;ll get back to you
                     </p>
                   </div>
                 </div>
@@ -244,7 +331,8 @@ export default function ContactForm() {
                   <div className="mb-6 p-4 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3">
                     <CheckCircle2 className="w-5 h-5 text-emerald-600 flex-shrink-0" />
                     <p className="text-sm font-medium text-emerald-700">
-                      Message sent successfully! We'll get back to you soon.
+                      Message sent successfully! We&apos;ll get back to you
+                      soon.
                     </p>
                   </div>
                 )}
@@ -415,7 +503,12 @@ export default function ContactForm() {
                       />
                     </div>
                   </div>
-
+{/* CAPTCHA */}
+{isMounted && (
+  <div className="flex justify-center">
+    <div ref={captchaRef}></div>
+  </div>
+)}
                   {/* Submit Button */}
                   <button
                     type="submit"

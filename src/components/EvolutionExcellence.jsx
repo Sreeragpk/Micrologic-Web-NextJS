@@ -34,9 +34,9 @@ export default function EvolutionExcellence() {
           </h2>
 
           {/* Main Heading */}
-          <h1 className="text-white font-extrabold text-4xl md:text-6xl uppercase leading-snug">
+          <h2 className="text-white font-extrabold text-4xl md:text-6xl uppercase leading-snug">
             To Excellence
-          </h1>
+          </h2>
 
           {/* Intro */}
           <p className="text-gray-200 leading-relaxed max-w-3xl mx-auto">

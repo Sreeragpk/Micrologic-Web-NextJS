@@ -1,61 +1,47 @@
+// app/support/faq/page.js
 import ProfessionalFAQ from "@/components/FAQ";
 
-// Next.js SEO Metadata
 export const metadata = {
-  title: "Frequently Asked Questions | Automation Solutions | Micrologic",
+  title: "FAQ | Automation, Testing & Traceability Questions",
   description:
-    "Find answers to common questions about our automation solutions, robotic systems, vision inspection, testing solutions, and Industry 4.0 services for manufacturing.",
+    "Find answers to frequently asked questions about Micrologic's automation solutions, testing systems, vision inspection, assembly lines, traceability, Industry 4.0, and support services.",
   keywords: [
     "automation FAQ",
-    "robotic automation questions",
-    "vision inspection systems",
-    "assembly automation",
-    "testing solutions",
-    "Industry 4.0",
-    "manufacturing automation",
-    "turnkey automation",
-    "collaborative robots",
-    "Micrologic support",
-    "automation services",
+    "testing solutions FAQ",
+    "manufacturing automation questions",
+    "vision inspection FAQ",
+    "assembly automation FAQ",
+    "traceability FAQ",
+    "Industry 4.0 FAQ",
+    "Micrologic FAQ",
   ],
-  authors: [{ name: "Micrologic" }],
-  creator: "Micrologic",
-  publisher: "Micrologic",
-
-  // Open Graph
+  alternates: {
+    canonical: "https://www.micrologicglobal.com/support/faq",
+  },
   openGraph: {
-    title: "Frequently Asked Questions | Automation Solutions | Micrologic",
+    title: "FAQ | Automation & Testing Questions | Micrologic",
     description:
-      "Find answers to common questions about our automation solutions, robotic systems, vision inspection, testing solutions, and Industry 4.0 services for manufacturing.",
-    url: "https://www.micrologicglobal.com/faq",
+      "Answers to common questions about automated assembly, testing, vision inspection, traceability, and Industry 4.0 solutions.",
+    url: "https://www.micrologicglobal.com/support/faq",
     siteName: "Micrologic",
     images: [
       {
-        url: "/assets/faq-automation.jpg",
+        url: "https://www.micrologicglobal.com/assets/micrologic.png",
         width: 1200,
         height: 630,
-        alt: "Micrologic Automation Solutions FAQ",
+        alt: "Micrologic FAQ — Automation and testing solutions questions",
       },
     ],
     locale: "en_US",
     type: "website",
   },
-
-  // Twitter Card
   twitter: {
     card: "summary_large_image",
-    title: "Frequently Asked Questions | Automation Solutions | Micrologic",
+    title: "FAQ | Micrologic Automation Solutions",
     description:
-      "Find answers to common questions about our automation solutions, robotic systems, vision inspection, testing solutions, and Industry 4.0 services for manufacturing.",
-    images: ["/assets/faq-automation.jpg"],
+      "Find answers about automated assembly, testing, traceability, and Industry 4.0 solutions.",
+    images: ["https://www.micrologicglobal.com/assets/micrologic.png"],
   },
-
-  // Canonical URL
-  alternates: {
-    canonical: "https://www.micrologicglobal.com/faq",
-  },
-
-  // Robots
   robots: {
     index: true,
     follow: true,
@@ -69,8 +55,8 @@ export const metadata = {
   },
 };
 
-// JSON-LD Structured Data for FAQ Page
-const jsonLd = {
+// FAQ Schema — matches visible content on this page
+const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   mainEntity: [
@@ -103,15 +89,15 @@ const jsonLd = {
       name: "What types of automation solutions do you offer?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We offer robotic assembly, Robotic screw fixing, dispensing, Vision Inspection, palletizing, material handling, and special-purpose machines (SPMs).",
+        text: "We offer robotic assembly, robotic screw fixing, dispensing, vision inspection, palletizing, material handling, and special-purpose machines (SPMs).",
       },
     },
     {
       "@type": "Question",
-      name: "Do you work with collaborative robots (cobots)?",
+      name: "Can your systems integrate with existing machines?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. We integrate both industrial robots and collaborative robots depending on safety, space, and application requirements.",
+        text: "Yes. Our solutions are designed to seamlessly integrate with legacy machines, PLCs, MES, and ERP systems.",
       },
     },
     {
@@ -135,7 +121,15 @@ const jsonLd = {
       name: "What types of testing systems do you offer?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We offer functional testing, electrical testing, leak testing, Vibration Testing, end-of-line (EOL) testing, and durability testing systems.",
+        text: "We offer functional testing, electrical testing, leak testing, vibration testing, end-of-line (EOL) testing, and durability testing systems.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you offer traceability solutions?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. We provide end-to-end traceability using barcodes, RFID, and vision-based identification across assembly and test lines.",
       },
     },
     {
@@ -154,6 +148,33 @@ const jsonLd = {
         text: "Project timelines vary based on complexity, but we typically deliver within 8–16 weeks.",
       },
     },
+    {
+      "@type": "Question",
+      name: "What kind of after-sales support do you offer?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We offer AMC, remote support, on-site service, and spare parts support to ensure maximum uptime.",
+      },
+    },
+  ],
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://www.micrologicglobal.com",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "FAQ",
+      item: "https://www.micrologicglobal.com/support/faq",
+    },
   ],
 };
 
@@ -162,7 +183,15 @@ export default function FAQPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqSchema),
+        }}
       />
       <ProfessionalFAQ />
     </>

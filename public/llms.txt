@@ -1,0 +1,42 @@
+# Micrologic Integrated Systems
+# https://www.micrologicglobal.com
+
+## About
+Micrologic Integrated Systems is a manufacturing automation company based in Bengaluru, India. We design and deliver automated assembly lines, end-of-line test systems, production traceability solutions, and Industry 4.0 digital transformation platforms for automotive, electric vehicle, electronics, and medical device manufacturers.
+
+## Solutions
+- Assembly Automation: Conveyors, robotic automation, rotary indexing, cellular cells, vision inspection
+- Test Solutions: ICT, FCT, EOL testing, RF testing, burn-in testing, vibration screening
+- Traceability: Micrologic Traceware for part tracking, process monitoring, error-proofing (poka-yoke)
+- Digital Transformation: FactEyes cloud analytics platform with OEE, SPC, predictive maintenance
+
+## Products
+- Automated Test Cells
+- Automated Assembly Cells
+- BON Test Fixtures
+- MTS Test Software Platform
+- RF Shielded Test Enclosures
+- Robotic Automation Cells
+- Traceware Platform
+
+## Industries Served
+- Automotive
+- Electric Vehicles (EV)
+- Electrical & Electronics
+- Medical Devices
+
+## Key Pages
+- Home: https://www.micrologicglobal.com
+- Test Solutions: https://www.micrologicglobal.com/solutions/test-solutions
+- Assembly Automation: https://www.micrologicglobal.com/solutions/assembly-automation
+- Traceability: https://www.micrologicglobal.com/solutions/traceability
+- Digital Transformation: https://www.micrologicglobal.com/solutions/digital-transformation
+- About Us: https://www.micrologicglobal.com/about-us
+- Careers: https://www.micrologicglobal.com/careers
+- Contact: https://www.micrologicglobal.com/contact
+
+## Contact
+- Phone: +91-96635-21132
+- Email: info@micrologicglobal.com
+- Address: #22-D1, "Micrologic Drive", KIADB Industrial Area, NH 275, 1st Phase, Kumbalagodu, Bengaluru, Karnataka 560 074
+- LinkedIn: https://www.linkedin.com/company/micrologic/

@@ -306,18 +306,22 @@
 import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
 import { useEffect, useRef } from "react";
 
+const LIBRARIES = ["marker"];
 const center = {
   lat: 12.873259,
   lng: 77.442332,
 };
-
 export default function LocationMap({ className = "" }) {
   const mapRef = useRef(null);
 
+  // const { isLoaded } = useJsApiLoader({
+  //   googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
+  //   libraries: ["marker"], // required for AdvancedMarkerElement
+  // });
   const { isLoaded } = useJsApiLoader({
-    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
-    libraries: ["marker"], // required for AdvancedMarkerElement
-  });
+  googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
+  libraries: LIBRARIES,
+});
 
   useEffect(() => {
     if (!mapRef.current || !window.google) return;
