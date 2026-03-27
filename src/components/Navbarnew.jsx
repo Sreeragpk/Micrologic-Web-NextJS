@@ -39,63 +39,63 @@ import {
 import { SiIntel } from "react-icons/si"; // Example for electronics (brand-like)
 
 const navLinks = [
-  // {
-  //   name: "Products",
-  //   href: "products",
-  //   type: "scroll",
-  //   columns: [
-  //     {
-  //       heading: "Our Products",
-  //       links: [
-  //         {
-  //           name: "MTS Software",
-  //           href: "/products/mts-test-software",
-  //           icon: <FaLaptopCode className="text-blue-600" />,
-  //         },
-  //         {
-  //           name: "Traceware Platform",
-  //           href: "/products/traceware-platform",
-  //           icon: <FaDatabase className="text-green-600" />,
-  //         },
-  //         {
-  //           name: "Automated Test Cells",
-  //           href: "/products/automated-test-cells",
-  //           icon: <FaTools className="text-amber-600" />,
-  //         },
-  //         {
-  //           name: "Automated Assembly Cells",
-  //           href: "/products/automated-assembly-cells",
-  //           icon: <FaIndustry className="text-purple-600" />,
-  //         },
-  //         {
-  //           name: "Robotic Automation Cells",
-  //           href: "/products/robotic-automation-cells",
-  //           icon: <FaRobot className="text-rose-600" />,
-  //         },
-  //         // {
-  //         //   name: "Control Systems",
-  //         //   href: "/products/control-systems",
-  //         //   icon: <FaSlidersH className="text-indigo-600" />,
-  //         // },
-  //         {
-  //           name: "RF Shielded Test Enclosures",
-  //           href: "/products/rf-shielded-test-enclosures",
-  //           icon: <FaBroadcastTower className="text-pink-600" />,
-  //         },
-  //         {
-  //           name: "BON Test Fixtures",
-  //           href: "/products/bon-test-fixtures",
-  //           icon: <FaCogs className="text-teal-600" />,
-  //         },
-  //         // {
-  //         //   name: "Industrial Computers",
-  //         //   href: "/products/industrial-computers",
-  //         //   icon: <FaDesktop className="text-gray-700" />,
-  //         // },
-  //       ],
-  //     },
-  //   ],
-  // },
+  {
+    name: "Products",
+    href: "products",
+    type: "scroll",
+    columns: [
+      {
+        heading: "Our Products",
+        links: [
+          {
+            name: "MTS Software",
+            href: "/products/mts-test-software",
+            icon: <FaLaptopCode className="text-blue-600" />,
+          },
+          {
+            name: "Traceware Platform",
+            href: "/products/traceware-platform",
+            icon: <FaDatabase className="text-green-600" />,
+          },
+          {
+            name: "Automated Test Cells",
+            href: "/products/automated-test-cells",
+            icon: <FaTools className="text-amber-600" />,
+          },
+          {
+            name: "Automated Assembly Cells",
+            href: "/products/automated-assembly-cells",
+            icon: <FaIndustry className="text-purple-600" />,
+          },
+          {
+            name: "Robotic Automation Cells",
+            href: "/products/robotic-automation-cells",
+            icon: <FaRobot className="text-rose-600" />,
+          },
+          // {
+          //   name: "Control Systems",
+          //   href: "/products/control-systems",
+          //   icon: <FaSlidersH className="text-indigo-600" />,
+          // },
+          {
+            name: "RF Shielded Test Enclosures",
+            href: "/products/rf-shielded-test-enclosures",
+            icon: <FaBroadcastTower className="text-pink-600" />,
+          },
+          {
+            name: "BON Test Fixtures",
+            href: "/products/bon-test-fixtures",
+            icon: <FaCogs className="text-teal-600" />,
+          },
+          // {
+          //   name: "Industrial Computers",
+          //   href: "/products/industrial-computers",
+          //   icon: <FaDesktop className="text-gray-700" />,
+          // },
+        ],
+      },
+    ],
+  },
 
   {
     name: "Solutions",
@@ -401,23 +401,23 @@ const Navbar = () => {
               }}
               className="flex items-center gap-3 group"
             >
-<motion.div
-  layoutId="site-logo"
-  initial={{ opacity: 0, scale: 0.9 }}
-  animate={{ opacity: 1, scale: 1 }}
-  transition={{ duration: 0.35 }}
-  className="relative group"
->
+              <motion.div
+                layoutId="site-logo"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.35 }}
+                className="relative group"
+              >
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
 
                 <Image
-  src="/assets/micrologic.png"
-  alt="Micrologic"
-  className="h-12 w-auto relative z-10"
-  width={220}
-  height={60}
-  priority
-/>
+                  src="/assets/micrologic.png"
+                  alt="Micrologic"
+                  className="h-12 w-auto relative z-10"
+                  width={220}
+                  height={60}
+                  priority
+                />
               </motion.div>
             </Link>
 
@@ -628,7 +628,7 @@ const Navbar = () => {
           {/* Mobile Header */}
           <div className="p-6 border-b border-gray-100">
             <div className="flex items-center justify-between">
-             <div className="relative">
+              <div className="relative">
                 <Image
                   src="/assets/micrologic.png"
                   alt="Micrologic"

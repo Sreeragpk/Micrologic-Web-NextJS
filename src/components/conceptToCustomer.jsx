@@ -272,7 +272,7 @@ const ConceptToCustomer = () => {
           </div>
 
           {/* RIGHT IMAGE */}
-   <div
+<div
   ref={imageRef}
   className={`relative transform transition-all duration-1000 ease-out delay-300 ${
     imageVisible
@@ -280,18 +280,24 @@ const ConceptToCustomer = () => {
       : "opacity-0 translate-y-12 scale-95"
   }`}
 >
-  <div className="relative p-6 sm:p-8 h-[450px] sm:h-[500px]">
+  <div className="relative h-[450px] sm:h-[500px] w-full">
 
+    {/* Border corners */}
     <div className="absolute top-0 left-0 w-24 h-24 border-l-4 border-t-4 border-blue-500 rounded-tl-3xl"></div>
     <div className="absolute bottom-0 right-0 w-24 h-24 border-r-4 border-b-4 border-indigo-500 rounded-br-3xl"></div>
 
-    <Image
-      src="/assets/marketpng.webp"
-      alt="Automation Machine"
-      fill
-      className="object-contain"
-      priority
-    />
+    {/* INNER FRAME (this creates space) */}
+    <div className="absolute inset-0 p-6 sm:p-8">
+      <div className="relative w-full h-full bg-white/0">
+        <Image
+          src="/assets/marketpng.webp"
+          alt="Automation Machine"
+          fill
+          className="object-contain"
+          priority
+        />
+      </div>
+    </div>
 
   </div>
 </div>
