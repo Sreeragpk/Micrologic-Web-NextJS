@@ -1,36 +1,175 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🚀 Micrologic Web Application
 
-## Getting Started
+A high-performance, SEO-optimized web application built using **Next.js**, designed for scalability, fast rendering, and modern user experience.
 
-First, run the development server:
+---
+
+## 🌐 Live Demo
+
+👉 https://micrologicglobal.com
+
+---
+
+## 📌 Features
+
+* ⚡ Server-Side Rendering (SSR) & Static Site Generation (SSG)
+* 🔍 SEO Optimized (Meta tags, structured data, sitemap)
+* 🛡️ Security enhancements (Cloudflare protection, CAPTCHA)
+* 📩 Contact form with backend API integration
+* 📊 Analytics integration (Google Analytics / custom tracking)
+* 🖼️ Image protection & tracking system
+* 📱 Fully responsive UI
+* 🚀 Optimized performance (Core Web Vitals friendly)
+
+---
+
+## 🛠️ Tech Stack
+
+**Frontend:**
+
+* Next.js
+* React
+* Tailwind CSS
+
+**Backend:**
+
+* Node.js
+* Express.js
+
+**Database:**
+
+* PostgreSQL
+
+**Deployment:**
+
+* IIS (Windows Server)
+* Azure VM
+
+---
+
+## 📂 Project Structure
+
+```
+micrologic/
+├── components/        # Reusable UI components
+├── pages/             # Next.js pages (routes)
+├── public/            # Static assets
+├── styles/            # Global styles
+├── api/               # Backend API routes
+├── utils/             # Helper functions
+└── server.js          # Custom backend server
+```
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/your-username/micrologic.git
+cd micrologic
+```
+
+### 2️⃣ Install dependencies
+
+```bash
+npm install
+```
+
+### 3️⃣ Setup environment variables
+
+Create a `.env` file:
+
+```env
+PORT=5001
+DATABASE_URL=your_database_url
+EMAIL_SERVICE=your_email_config
+CAPTCHA_SECRET=your_secret_key
+```
+
+---
+
+## ▶️ Running the Application
+
+### Development
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Production
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```bash
+npm run build
+npm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🔐 Security Features
 
-To learn more about Next.js, take a look at the following resources:
+* Cloudflare CAPTCHA integration
+* Rate limiting for APIs
+* IP tracking for suspicious activities
+* Protected image downloads
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📈 SEO Optimization
 
-## Deploy on Vercel
+* Dynamic meta tags
+* Open Graph & Twitter cards
+* Sitemap & robots.txt
+* Fast loading (Lighthouse optimized)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🧪 API Endpoints
+
+| Method | Endpoint     | Description             |
+| ------ | ------------ | ----------------------- |
+| POST   | /api/contact | Send contact form email |
+| POST   | /api/log     | Track user activity     |
+
+---
+
+## 🚀 Deployment
+
+Deployed on:
+
+* Azure Virtual Machine
+* IIS with Node.js (via iisnode or reverse proxy)
+
+---
+
+## 🐞 Known Issues
+
+* Ensure CAPTCHA is properly configured in production
+* Email service may fail without valid SMTP setup
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please fork the repo and submit a pull request.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+## 👨‍💻 Author
+
+Developed by **SREERAG P K**
+
+---
+
+## ⭐ Support
+
+If you like this project, give it a ⭐ on GitHub!
+
+---
