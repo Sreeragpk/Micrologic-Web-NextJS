@@ -1,3 +1,5 @@
+import FloatingVideo from "@/components/FloatingVideo";
+
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import AnimatedCards from "@/components/Animate";
@@ -20,6 +22,7 @@ export default function Home() {
       <EvolutionExcellence />
       <AutoPlayYouTube />
       <ContactForm />
+       <FloatingVideo />
     </main>
   );
 }

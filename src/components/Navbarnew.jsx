@@ -125,6 +125,12 @@ const navLinks = [
             href: "/solutions/digital-transformation",
             icon: <FaCloud className="text-indigo-600" />,
           },
+          {
+            name: "FactEyes Analytics",
+            href: "http://facteyes.micrologicglobal.com/",
+            icon: <FaChartLine className="text-blue-600" />,
+            isHighlight: true,
+          },
         ],
       },
     ],
@@ -532,18 +538,31 @@ const Navbar = () => {
                                   // External link
                                   if (isExternal) {
                                     return (
-                                      <a
-                                        key={sublink.name}
-                                        href={sublink.href}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="flex items-center gap-2 py-2 px-3 text-sm rounded-lg transition-all text-gray-600 hover:bg-gray-50 hover:text-black"
-                                      >
-                                        <span className="text-lg">
-                                          {sublink.icon}
-                                        </span>
-                                        {sublink.name}
-                                      </a>
+                                      <React.Fragment key={sublink.name}>
+                                        {sublink.isHighlight && (
+                                          <div className="my-1.5 border-t border-gray-100"></div>
+                                        )}
+                                        <a
+                                          href={sublink.href}
+                                          target="_blank"
+                                          rel="noopener noreferrer"
+                                          className={`flex items-center justify-between py-2 px-3 text-sm rounded-lg transition-all ${
+                                            sublink.isHighlight
+                                              ? "bg-gradient-to-r from-blue-50/60 to-indigo-50/60 text-blue-700 hover:from-blue-50 hover:to-indigo-50 hover:text-blue-800 font-medium border border-blue-100/50 shadow-sm"
+                                              : "text-gray-600 hover:bg-gray-50 hover:text-black"
+                                          }`}
+                                        >
+                                          <div className="flex items-center gap-2">
+                                            <span className="text-lg">
+                                              {sublink.icon}
+                                            </span>
+                                            {sublink.name}
+                                          </div>
+                                          {sublink.isHighlight && (
+                                            <span className="text-[10px] bg-blue-600 text-white px-1.5 py-0.5 rounded-full font-semibold uppercase tracking-wider scale-90">Live</span>
+                                          )}
+                                        </a>
+                                      </React.Fragment>
                                     );
                                   }
 
@@ -716,19 +735,32 @@ const Navbar = () => {
                             // External link
                             if (isExternal) {
                               return (
-                                <a
-                                  key={sublink.name}
-                                  href={sublink.href}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  onClick={() => setMobileMenuOpen(false)}
-                                  className="flex items-center gap-3 py-2.5 px-4 text-sm rounded-lg transition-all duration-200 text-gray-600 hover:bg-gray-50"
-                                >
-                                  <span className="text-base">
-                                    {sublink.icon}
-                                  </span>
-                                  <span>{sublink.name}</span>
-                                </a>
+                                <React.Fragment key={sublink.name}>
+                                  {sublink.isHighlight && (
+                                    <div className="my-1.5 border-t border-gray-100"></div>
+                                  )}
+                                  <a
+                                    href={sublink.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                    className={`flex items-center justify-between py-2.5 px-4 text-sm rounded-lg transition-all duration-200 ${
+                                      sublink.isHighlight
+                                        ? "bg-gradient-to-r from-blue-50/60 to-indigo-50/60 text-blue-700 hover:from-blue-50 hover:to-indigo-50 hover:text-blue-800 font-medium border border-blue-100/50 shadow-sm"
+                                        : "text-gray-600 hover:bg-gray-50"
+                                    }`}
+                                  >
+                                    <div className="flex items-center gap-3">
+                                      <span className="text-base">
+                                        {sublink.icon}
+                                      </span>
+                                      <span>{sublink.name}</span>
+                                    </div>
+                                    {sublink.isHighlight && (
+                                      <span className="text-[10px] bg-blue-600 text-white px-1.5 py-0.5 rounded-full font-semibold uppercase tracking-wider scale-90">Live</span>
+                                    )}
+                                  </a>
+                                </React.Fragment>
                               );
                             }
 
