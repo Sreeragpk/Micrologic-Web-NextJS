@@ -111,7 +111,6 @@
 // export default nextConfig;
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  
   // 🔒 HIDE NEXT.JS HEADER
   poweredByHeader: false,
 
